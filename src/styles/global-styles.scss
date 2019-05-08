@@ -1,13 +1,27 @@
+@import 'variables';
+@import 'mixins';
+
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  font-size: 100%;
 }
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+* {
+  box-sizing: border-box; 
+}
+
+.center {
+  margin: 0 auto;
+  width: $desktop-site-width;
+}
+
 article,
 aside,
 details,
@@ -40,6 +54,8 @@ template {
   display: none;
 }
 a {
+  text-decoration: none;
+  color: inherit;
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
 }
