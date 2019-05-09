@@ -1,18 +1,16 @@
 import React, {useState} from 'react'
 
 export default function IntroLetter({char}) {
-  const [ isHovered, setIsHovered ] = useState(false);
-
-
+  const [ hoverClass, setHoverClass ] = useState('single-letter')
 
   if (char === ' ') {
     return <span> </span>
   } else {
     return (
       <span
-        className={isHovered ? 'single-letter hovered' : 'single-letter'}
-        onMouseOver={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
+        className={hoverClass}
+        onMouseOver={() => setHoverClass('single-letter hovered')}
+        onMouseLeave={() => setHoverClass('single-letter unhovered')}
       >
         { char }
       </span>

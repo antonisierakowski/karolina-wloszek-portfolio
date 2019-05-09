@@ -11,27 +11,31 @@ import { StaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 
-const Layout = ({ children, fontColor, renderFooter }) => (
-  <StaticQuery
-    query={graphql`
-      query SiteTitleQuery {
-        site {
-          siteMetadata {
-            title
+const Layout = ({ children, fontColor, renderFooter, location }) => {
+  
+  return (
+    <StaticQuery
+      query={graphql`
+        query SiteTitleQuery {
+          site {
+            siteMetadata {
+              title
+            }
           }
         }
-      }
-    `}
-    render={data => (
-      <>
-        <div>
-          <Header fontColor={fontColor} />
-          <main>{children}</main>
-        </div>
-      </>
-    )}
-  />
-)
+      `}
+      render={data => (
+        <>
+          <div>
+            <Header fontColor={fontColor} location={location} />
+            <main>{children}</main>
+          </div>
+        </>
+      )}
+    />
+  )
+
+}
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,

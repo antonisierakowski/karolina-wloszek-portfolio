@@ -2,24 +2,61 @@
 @import 'mixins';
 
 #header {
+    font-family: $secondary-font;
     position: fixed;
     width: 100%;
     height: 6rem;
     display: flex;
     align-items: center;
-}
+    font-size: 0.89rem;
 
-.center {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-ul {
-    list-style: none;
-
-    li {
-        display: inline;
-        margin-right: 1rem;
+    .center {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
+  
+    ul {
+        list-style: none;
+    
+        li {
+            text-align: center;
+            width: 7rem;
+            display: inline-block;
+            position: relative;
+            margin-left: 1rem;
+        }
+        
+        .hoverable:before, .hoverable:after {
+            content: '';
+            position: absolute;
+            width: 0%;
+            height: 1px;
+            top: 50%;
+            margin-top: -0.5px;
+            background: #fff;
+        }
+        
+        .hoverable:before {
+            left: -2.5px;
+        }
+        .hoverable:after {
+            right: 2.5px;
+            background: #fff;
+            transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+        }
+        
+        .hoverable:hover:before {
+            background: #fff;
+            width: 100%;
+            transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+        }
+        
+        .hoverable:hover:after {
+            background: transparent;
+            width: 100%;
+            transition: 0s;
+        }
+  }
 }
+

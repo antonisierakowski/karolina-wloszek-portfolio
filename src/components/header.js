@@ -2,14 +2,22 @@ import React from "react"
 import { Link } from 'gatsby'
 import '../styles/header.scss'
 
-const Header = props => {
+const Header = ({fontColor, location}) => {
   return (
-    <header id='header' style={{color: props.fontColor}}>
+    <header id='header' style={{color: fontColor}}>
       <div className='center'>
-        <p>Karolina Włoszek</p>
+        <p><Link to='/'>Karolina Włoszek</Link></p>
         <ul>
-          <li><Link to='/projects/'>PROJEKTY</Link></li>
-          <li><Link to='/about-me/'>O MNIE</Link></li>
+          <li>
+            <Link to={location !== '/projects/' ? '/projects/' : '/'} className={location !== '/projects/' ? 'hoverable' : null}>
+              {location !== '/projects/' ? 'PROJEKTY' : 'X'}
+            </Link>
+          </li>
+          <li>
+            <Link to={location !== '/about-me/' ? '/about-me/' : '/'} className={location !== '/about-me/' ? 'hoverable' : null}>
+              {location !== '/about-me/' ? 'O MNIE' : 'X'}
+            </Link>
+          </li>
         </ul>
       </div>
     </header>

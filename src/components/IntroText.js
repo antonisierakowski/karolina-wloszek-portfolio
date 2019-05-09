@@ -1,15 +1,17 @@
-import React from 'react'
-import IntroLetter from './IntroLetter'
+import React, { Fragment } from 'react'
+import IntroWord from './IntroWord'
 
-export default function IntroText({children}) {
-    
-    const letters = children.split('').map(e => <IntroLetter char={e}/>)
-
+export default function IntroText({ children }) {
     return (
-    <div>
-        <p className='intro-text'>
-            {letters}
+      <div>
+        <p className="intro-text">
+            {children.split(' ').map((word, wordIndex) => (
+                <Fragment>
+                    <IntroWord key={wordIndex} word={word} />
+                    <span> </span>
+                </Fragment>
+            ))}
         </p>
-    </div>
-  )
-}
+      </div>
+    );
+  }
