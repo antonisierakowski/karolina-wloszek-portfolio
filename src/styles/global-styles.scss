@@ -21,6 +21,12 @@ body {
   width: $desktop-site-width;
 }
 
+
+
+
+i {
+  font-style: italic;
+}
 article,
 aside,
 details,
@@ -69,8 +75,7 @@ abbr[title] {
 }
 b,
 strong {
-  font-weight: inherit;
-  font-weight: bolder;
+  font-weight: 700;
 }
 dfn {
   font-style: italic;

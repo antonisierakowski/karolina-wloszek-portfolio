@@ -7,11 +7,13 @@ import '../styles/global-styles.scss'
 import IntroText from '../components/IntroText'
 
 const IndexPage = ({location}) => (
-  <Layout fontColor='white' location={location.pathname}>
+  <Layout fontColor='white' location={location}>
     <SEO title="Portfolio" keywords={[`karolina włoszek`, `product design`, `design`, `portfolio`]} />
-      <div className='center'>
-        <div className='introduction-wrapper'>
-          <IntroText>Hi, I'm Karolina, a freelance designer based in Wrocław. Ice cream gummies carrot cake chocolate bar tootsie roll. Liquorice macaroon soufflé powder gingerbread.</IntroText>
+      <div id='index-page' className='background'>
+        <div className='center'>
+          <div className='introduction-wrapper'>
+            <IntroText>Hi, I'm Karolina, a freelance designer based in Wrocław. Ice cream gummies carrot cake chocolate bar tootsie roll. Liquorice macaroon soufflé powder gingerbread.</IntroText>
+          </div>
         </div>
       </div>
   </Layout>

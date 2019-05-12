@@ -5,9 +5,9 @@ export default function IntroText({ children }) {
     return (
       <div>
         <p className="intro-text">
-            {children.split(' ').map((word, wordIndex) => (
-                <Fragment>
-                    <IntroWord key={wordIndex} word={word} />
+            {children.split(' ').map((word, i) => (
+                <Fragment key={word + i}>
+                    <IntroWord word={word} />
                     <span> </span>
                 </Fragment>
             ))}

@@ -3,52 +3,50 @@ import '../styles/projects.scss'
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import '../styles/global-styles.scss'
-import projectsData from '../projectsData'
+import projectsData from '../project-data/projectsData'
 import Slider from "react-slick";
 import {Link} from 'gatsby'
 import ProjectCaption from '../components/ProjectCaption'
-
+import useCursorScreenHalf from '../components/useCursorScreenHalf'
 
 
 const Projects = ({location}) => {
-  const [ isAnyHovered, setIsAnyHovered ] = useState(false);
+  const [ isAnyHovered, setIsAnyHovered ] = useState(false)
   const [ hoveredIndex, setHoveredIndex ] = useState(null)
+  const cursorScreenHalf = useCursorScreenHalf();
 
-  const handleMouseEnter = (e, i) => {
+  const handleMouseEnter = (i) => {
     setIsAnyHovered(true)
     setHoveredIndex(i)
-
   }
 
-  const handleMouseLeave = e => {
+  const handleMouseLeave = () => {
     setIsAnyHovered(false)
     setHoveredIndex(null)
   }
 
-  const projects = projectsData.map((e, i) => {
+  const projects = projectsData.map((project, i) => {
     return (
       <div
         className='slide-container'
-        key={e.title}
-        onMouseEnter={e => handleMouseEnter(e, i)}
+        key={project.title}
+        onMouseEnter={() => handleMouseEnter(i)}
         onMouseLeave={handleMouseLeave}
       >
-        <Link to='/' key={'link' + e.title}>
+        <Link to={'/projects/' + project.route} key={'link' + project.title}>
           <img
-            key={'img' + e.title}
-            alt={`project_${e.title}`}
-            src={e.previewData.img}
-
+            alt={'img' + project.title}
+            src={project.previewData.img}
             className={isAnyHovered && hoveredIndex !== i ? 'out-of-focus' : null}
           />
         </Link>
-        {isAnyHovered && hoveredIndex === i ? <ProjectCaption key={'caption' + e.title} title={e.title} description={e.previewData.caption}/> : null}
+        {isAnyHovered && hoveredIndex === i ? <ProjectCaption title={project.title} description={project.previewData.caption} cursorScreenHalf={cursorScreenHalf} /> : null}
       </div>
     )
   })
 
   const dots = projectsData.map((e,i) => {
-    return <div className={hoveredIndex === i ? 'dot active' : 'dot'} />
+    return <div key={e.title + i} className={hoveredIndex === i ? 'dot active' : 'dot'} />
   })
 
 
@@ -56,16 +54,17 @@ const Projects = ({location}) => {
   const slickSettings = {
     dots: false,
     slidesToShow: 4,
-    infinite: false,
+    infinite: true,
     arrows: true,
     slidesToScroll: 2,
-    lazyLoad: 'progressive'
+    lazyLoad: 'progressive',
+    speed: 400,
   }
 
   return (
-    <Layout fontColor='black' location={location.pathname}>
-    <SEO title="Projekty" keywords={[`karolina włoszek`, `product design`, `design`, `portfolio`]} />
-      <div id='projects-page'>
+    <Layout fontColor='inherit' location={location.pathname}>
+    <SEO title="Projekty" keywords={[`karolina włoszek`, `product design`, `design`, `portfolio`]}/>
+      <div id='projects-page' className='background'>
           <div className='slider-wrapper'>
             <Slider {...slickSettings}>
               {projects}

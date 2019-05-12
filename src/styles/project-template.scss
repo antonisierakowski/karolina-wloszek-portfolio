@@ -1,0 +1,114 @@
+@import 'variables', 'mixins';
+
+#project-page {
+    width: 100vw;
+    min-height: 100vh;
+
+    &.background {
+        background: white;
+    }
+
+    .project-cover {
+        width: 100vw;
+        height: 100vh;
+        background-size: cover;
+    }
+
+    .center {
+        display: flex;
+        align-items: center;
+        height: 100vh;
+        .project-info {
+            
+            display: flex;
+            height: 70%;
+            .title-section {
+                width: 50%;
+                font-family: $primary-font;
+                .title {
+                    font-size: 5rem;
+                    font-weight: 700;
+                    
+                }
+                .year {
+                    font-size: 2rem;
+                    font-style: italic;
+                }
+                
+            }
+            .description-section {
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                .subtitle {
+                    font-family: $primary-font;
+                    font-size: 1.6rem;
+                    font-weight: 200;
+                }
+                .paragraphs {
+                    font-family: $secondary-font;
+                    font-size: 0.7rem;
+
+                    div {
+                        margin-bottom: 1rem;
+                        p {
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .project-gallery {
+
+
+        .one-photo {
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
+            margin-bottom: 1rem;
+            img {
+                width: 100%;
+                object-fit: cover;
+                margin-bottom: 1rem;
+            }
+        }
+
+        .two-photos {
+            height: 100vh;
+            display: flex;
+            .photo {
+                width: 50vw;
+                height: 100%;
+                overflow: hidden;
+                img {
+                    width: 1100%;
+                    object-fit: cover;
+                }          
+            }
+        }
+
+        .four-photos {
+            height: 100vh;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            .photo {
+                width: calc(50% - 0.5rem);
+                height: 50%;
+                overflow: hidden;
+                margin-bottom: 1rem;
+                img {
+                    width: 100%;
+                    object-fit: cover;
+
+                }
+            }
+        }
+    }
+
+}

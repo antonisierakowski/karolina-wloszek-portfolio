@@ -14,6 +14,10 @@
     align-items: center;
     color: lighten(black, 15%);
 
+    &.background {
+        background: white;
+    }
+
     .slider-wrapper {
 
         
@@ -27,17 +31,18 @@
                 transition: 0.2s;
             }
             .out-of-focus {
-                filter: opacity(30%);
+                filter: opacity(20%);
             }
 
             .project-caption {
                 
                 position: absolute;
                 top: 3rem;
-                left: 50%;
+                // left: 50%;
                 
                 z-index: 10000;
-                // text-align: left;
+                pointer-events: none;
+                
                 .project-title {
                     
                     display: inline-block;

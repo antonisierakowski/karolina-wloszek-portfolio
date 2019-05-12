@@ -1,12 +1,53 @@
 import React from "react"
 import { Link } from 'gatsby'
 import '../styles/header.scss'
+import styled from 'styled-components'
+
+const HeaderContainer = styled.header`
+  color: ${props => props.color};
+  .center {
+    ul {
+      .hoverable:before, .hoverable:after {
+            content: '';
+            position: absolute;
+            width: 0%;
+            height: 0.12rem;
+            top: 50%;
+            margin-top: -0.5px;
+            background: #fff;
+        }
+        
+        .hoverable:before {
+            left: 0;
+        }
+        .hoverable:after {
+            right: 0;
+            background: ${props => props.color === 'inherit' ? 'black' : props.color };
+            transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+        }
+        
+        .hoverable:hover:before {
+            background: ${props => props.color === 'inherit' ? 'black' : props.color };
+            width: 100%;
+            transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+        }
+        
+        .hoverable:hover:after {
+            background: transparent;
+            width: 100%;
+            transition: 0s;
+        }
+    }
+  }
+
+  
+`
 
 const Header = ({fontColor, location}) => {
   return (
-    <header id='header' style={{color: fontColor}}>
+    <HeaderContainer id='header' color={fontColor}>
       <div className='center'>
-        <p><Link to='/'>Karolina Włoszek</Link></p>
+        <Link to='/'>Karolina Włoszek</Link>
         <ul>
           <li>
             <Link to={location !== '/projects/' ? '/projects/' : '/'} className={location !== '/projects/' ? 'hoverable' : null}>
@@ -20,9 +61,11 @@ const Header = ({fontColor, location}) => {
           </li>
         </ul>
       </div>
-    </header>
+    </HeaderContainer>
 
   )
 }
+
+
 
 export default Header

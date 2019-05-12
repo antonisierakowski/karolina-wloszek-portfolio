@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: `/karolina-wloszek-portfolio`,
   siteMetadata: {
     title: `Karolina Włoszek`,
     description: `Portfolio - Karolina Włoszek`,
@@ -6,6 +7,7 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-sass`,
+    `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -25,7 +27,6 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
