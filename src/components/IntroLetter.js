@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState } from 'react'
 
 export default function IntroLetter({char}) {
   const [ hoverClass, setHoverClass ] = useState('single-letter')
@@ -17,3 +17,4 @@ export default function IntroLetter({char}) {
     )
   }
 }
+

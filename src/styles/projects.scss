@@ -1,1 +1,97 @@
 @import 'variables', 'mixins';
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+#projects-page {
+    width: 100vw;
+    height: 100vh;
+    background: white;
+    color: black;
+    padding-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    color: lighten(black, 15%);
+
+    .slider-wrapper {
+
+        
+        width: 100vw - 16.66vw - 4vw;
+        .slide-container {
+            position: relative;
+            img {
+                width: 13rem;
+                display: block;
+                margin: auto;
+                transition: 0.2s;
+            }
+            .out-of-focus {
+                filter: opacity(30%);
+            }
+
+            .project-caption {
+                
+                position: absolute;
+                top: 3rem;
+                left: 50%;
+                
+                z-index: 10000;
+                // text-align: left;
+                .project-title {
+                    
+                    display: inline-block;
+                    
+                    line-height: 80%;
+                    font-size: 6rem;
+                    
+                    margin: 0;
+                    font-weight: 700;
+                    
+
+                }
+                .project-description {
+                    font-size: 0.8rem;
+                    font-family: $secondary-font;
+                    font-style: italic;
+                    line-height: 0.9rem;
+            
+                }
+            }
+
+        }
+        
+
+        
+        .slick-arrow {
+            background-color: grey;
+            /* color: black; */
+        }
+        .slick-arrow:hover {
+            background-color: grey;
+        }
+        
+
+
+    }
+
+    .dots {
+        width: 10rem;
+        height: 15px;
+        display: flex;
+        justify-content: space-between;
+        
+        
+        .dot {
+            width: 0.6rem;
+            height: 0.6rem;
+            border: 0.09rem solid black;
+            border-radius: 50%;
+            transition: 0.4s;
+        }
+        .active {
+            background: black;
+        }
+    }
+
+}
