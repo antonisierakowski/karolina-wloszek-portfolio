@@ -1,6 +1,6 @@
 import React from 'react'
 import projectsData from '../../project-data/projectsData'
-import Template from './template'
+import Template from '../../components/page-template'
 
 export default function SoapCompany({location}) {
   return (

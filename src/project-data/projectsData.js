@@ -4,6 +4,7 @@ import galleryData from './galleryData'
 
 const projectsData = [];
 
+// mu.la
 projectsData[0] = {
     title: 'mu.la',
     route: 'mu-la',
@@ -12,7 +13,7 @@ projectsData[0] = {
         img: projectPreviews.mula,
     },
     contentData: {
-        coverImg: 'asd',
+        coverImg: galleryData.mula[0],
         year: '2018',
         subtitle: 'Modułowy instrument muzyczny wspomagający rozwój psychoruchowy dziecka.',
         paragraphs: [
@@ -31,14 +32,24 @@ projectsData[0] = {
         ],
         gallery: [
             [
-                'url zdj1'
+                galleryData.mula[1]
             ],
             [
-                'url zdj1', 'url zdj2'
+                galleryData.mula[2], galleryData.mula[3]
             ],
             [
-                'url zdj1', 'url zdj2', 'url zdj3', 'url zdj4',
-            ]
+                galleryData.mula[4]
+            ],
+            [
+                galleryData.mula[5]
+            ],
+            [
+                galleryData.mula[6], galleryData.mula[7]
+            ],
+            [
+                galleryData.mula[8]
+            ],
+
         ]
     },
     thumbnailData: {
@@ -47,6 +58,7 @@ projectsData[0] = {
 
 }
 
+// soap
 projectsData[1] = {
     title: 'The Soap Company',
     route: 'soap-company',
@@ -95,84 +107,447 @@ projectsData[1] = {
     }
 }
 
+// rogi
 projectsData[2] = {
     title: 'Rogi',
     route: 'rogi',
     previewData: {
         caption: <Fragment>Costume Design</Fragment>,
         img: projectPreviews.rogi,
+    },
+    contentData: {
+        coverImg: galleryData.rogi[0],
+        year: '2018',
+        subtitle: <Fragment>Kostium do spektaklu teatralnego<br/><i>Drzewom nie wypadają włosy</i></Fragment>,
+        paragraphs: [
+            {
+                title: 'OPIS',
+                content: 
+                    <Fragment>
+                        <p>
+                            KOBIETA: Babciu, byłaś kiedyś szczęśliwa?<br/>
+                            BABCIA: Tak, raz, jak zmarła ta wściekła koza.<br/>
+                            KOBIETA: Myślałam, że ją kochałaś?<br/>
+                            BABCIA: Kochałam, ale była naprawdę okropna. Zwłaszcza wtedy, kiedy walczyła o równe prawa dla wszystkich zwierząt. Wmawiała mi, że ja też jestem kozą.<br/>
+                            ŁEŚKA: Wcale ci nie wmawiałam, że jesteś kozą. Mówiłam tylko, że wszystkie zwierzęta czymś się od siebie różnią, i że człowiek od innych nie różni się niczym szczególnym.
+                        </p>
+                    </Fragment>,
+            },
+            {
+                title: 'MOJA ROLA',
+                content: <p>Projektowanie kostiumu, Wykonanie kostiumu</p>
+            },
+            {
+                title: 'WSPÓŁPRACA',
+                content: <p>Aleksandra Cząstka, <i>Teatr Dla Początkujących</i></p>
+            },
+        ],
+        gallery: [
+            [
+                galleryData.rogi[1], galleryData.rogi[2],
+            ],
+            [
+                galleryData.rogi[3]
+            ],
+            [
+                galleryData.rogi[4]
+            ],
+        ]
+    },
+    thumbnailData: {
+        previewImg: 'tu bd url zdj do preview',
     }
 }
 
+// skladak
 projectsData[3] = {
     title: 'Składak',
     route: 'skladak',
     previewData: {
         caption: 'elit, sed do eiusmod tempor incididunt',
         img: projectPreviews.skladak,
+    },
+    contentData: {
+        coverImg: galleryData.soap[0],
+        year: '2019',
+        subtitle: 'Projekt opakownań oraz logo dla manufaktury ręcznie wytwarzającej mydła',
+        paragraphs: [
+            {
+                title: 'OPIS',
+                content: <Fragment><p><strong>mu.la</strong> czyli muzyczne laboratorium pozwalające na zaangażowanie, oprócz słuchu, najważniejszego w przypadku muzyki zmysłu, także zmysłów wzroku i dotyku. Czy zastanawialiście się kiedyś jak wygląda dźwięk, jaki jest w dotyku? Albo jak jest zbudowany instrument? Z <strong>mu.lą</strong> dzieci mogą zaobserwować powstawanie fal dźwiękowych, zbadać właściwości różnych materiałów wydających dźwięki oraz tworzyć własne wersje instrumentu.</p><p>Podczas zabawy kategoria błędnego doświadczenia nie istnieje – każde doświadczenie, nawet to zakończone niepowodzeniem jest wartościowe. Umożliwia to rozwój myślenia wyjętego ze schematów oraz angażuje wyobraźnię i całą pomysłowość dziecka.</p></Fragment>,
+            },
+            {
+                title: 'MOJA ROLA',
+                content: <p>Projektowanie Graficzne, Ilustracje</p>
+            },
+            {
+                title: 'WIĘCEJ INFO',
+                content: <p>Personal project</p>
+            },
+        ],
+        gallery: [
+            [
+                galleryData.soap[1], galleryData.soap[2], galleryData.soap[3], galleryData.soap[4], 
+            ],
+            [
+                galleryData.soap[5]
+            ],
+            [
+                galleryData.soap[6]
+            ],
+            [
+                galleryData.soap[7], galleryData.soap[8], galleryData.soap[9], galleryData.soap[10], 
+            ],
+            [
+                galleryData.soap[11]
+            ]
+        ]
+    },
+    thumbnailData: {
+        previewImg: 'tu bd url zdj do preview',
     }
 }
 
+// moduu
 projectsData[4] = {
     title: 'Moduu',
     route: 'moduu',
     previewData: {
         caption: 'quis nostrud exercitation ullamco laboris nisi ut aliquip',
         img: projectPreviews.moduu,
+    },
+    contentData: {
+        coverImg: galleryData.soap[0],
+        year: '2019',
+        subtitle: 'Projekt opakownań oraz logo dla manufaktury ręcznie wytwarzającej mydła',
+        paragraphs: [
+            {
+                title: 'OPIS',
+                content: <Fragment><p><strong>mu.la</strong> czyli muzyczne laboratorium pozwalające na zaangażowanie, oprócz słuchu, najważniejszego w przypadku muzyki zmysłu, także zmysłów wzroku i dotyku. Czy zastanawialiście się kiedyś jak wygląda dźwięk, jaki jest w dotyku? Albo jak jest zbudowany instrument? Z <strong>mu.lą</strong> dzieci mogą zaobserwować powstawanie fal dźwiękowych, zbadać właściwości różnych materiałów wydających dźwięki oraz tworzyć własne wersje instrumentu.</p><p>Podczas zabawy kategoria błędnego doświadczenia nie istnieje – każde doświadczenie, nawet to zakończone niepowodzeniem jest wartościowe. Umożliwia to rozwój myślenia wyjętego ze schematów oraz angażuje wyobraźnię i całą pomysłowość dziecka.</p></Fragment>,
+            },
+            {
+                title: 'MOJA ROLA',
+                content: <p>Projektowanie Graficzne, Ilustracje</p>
+            },
+            {
+                title: 'WIĘCEJ INFO',
+                content: <p>Personal project</p>
+            },
+        ],
+        gallery: [
+            [
+                galleryData.soap[1], galleryData.soap[2], galleryData.soap[3], galleryData.soap[4], 
+            ],
+            [
+                galleryData.soap[5]
+            ],
+            [
+                galleryData.soap[6]
+            ],
+            [
+                galleryData.soap[7], galleryData.soap[8], galleryData.soap[9], galleryData.soap[10], 
+            ],
+            [
+                galleryData.soap[11]
+            ]
+        ]
+    },
+    thumbnailData: {
+        previewImg: 'tu bd url zdj do preview',
     }
 }
 
+// pokoj zabaw
 projectsData[5] = {
     title: <Fragment>Pokój&nbsp;zabaw</Fragment>,
     route: 'pokoj-zabaw',
     previewData: {
         caption: 'reprehenderit in voluptate velit esse cillum dolore eu fugiat',
         img: projectPreviews.pokojZabaw,
+    },
+    contentData: {
+        coverImg: galleryData.soap[0],
+        year: '2019',
+        subtitle: 'Projekt opakownań oraz logo dla manufaktury ręcznie wytwarzającej mydła',
+        paragraphs: [
+            {
+                title: 'OPIS',
+                content: <Fragment><p><strong>mu.la</strong> czyli muzyczne laboratorium pozwalające na zaangażowanie, oprócz słuchu, najważniejszego w przypadku muzyki zmysłu, także zmysłów wzroku i dotyku. Czy zastanawialiście się kiedyś jak wygląda dźwięk, jaki jest w dotyku? Albo jak jest zbudowany instrument? Z <strong>mu.lą</strong> dzieci mogą zaobserwować powstawanie fal dźwiękowych, zbadać właściwości różnych materiałów wydających dźwięki oraz tworzyć własne wersje instrumentu.</p><p>Podczas zabawy kategoria błędnego doświadczenia nie istnieje – każde doświadczenie, nawet to zakończone niepowodzeniem jest wartościowe. Umożliwia to rozwój myślenia wyjętego ze schematów oraz angażuje wyobraźnię i całą pomysłowość dziecka.</p></Fragment>,
+            },
+            {
+                title: 'MOJA ROLA',
+                content: <p>Projektowanie Graficzne, Ilustracje</p>
+            },
+            {
+                title: 'WIĘCEJ INFO',
+                content: <p>Personal project</p>
+            },
+        ],
+        gallery: [
+            [
+                galleryData.soap[1], galleryData.soap[2], galleryData.soap[3], galleryData.soap[4], 
+            ],
+            [
+                galleryData.soap[5]
+            ],
+            [
+                galleryData.soap[6]
+            ],
+            [
+                galleryData.soap[7], galleryData.soap[8], galleryData.soap[9], galleryData.soap[10], 
+            ],
+            [
+                galleryData.soap[11]
+            ]
+        ]
+    },
+    thumbnailData: {
+        previewImg: 'tu bd url zdj do preview',
     }
 }
 
+// costam
 projectsData[6] = {
     title: 'Cośtam',
     route: 'costam',
     previewData: {
         caption: 'Ut enim ad minim veniam, quis',
         img: projectPreviews.costam,
+    },
+    contentData: {
+        coverImg: galleryData.soap[0],
+        year: '2019',
+        subtitle: 'Projekt opakownań oraz logo dla manufaktury ręcznie wytwarzającej mydła',
+        paragraphs: [
+            {
+                title: 'OPIS',
+                content: <Fragment><p><strong>mu.la</strong> czyli muzyczne laboratorium pozwalające na zaangażowanie, oprócz słuchu, najważniejszego w przypadku muzyki zmysłu, także zmysłów wzroku i dotyku. Czy zastanawialiście się kiedyś jak wygląda dźwięk, jaki jest w dotyku? Albo jak jest zbudowany instrument? Z <strong>mu.lą</strong> dzieci mogą zaobserwować powstawanie fal dźwiękowych, zbadać właściwości różnych materiałów wydających dźwięki oraz tworzyć własne wersje instrumentu.</p><p>Podczas zabawy kategoria błędnego doświadczenia nie istnieje – każde doświadczenie, nawet to zakończone niepowodzeniem jest wartościowe. Umożliwia to rozwój myślenia wyjętego ze schematów oraz angażuje wyobraźnię i całą pomysłowość dziecka.</p></Fragment>,
+            },
+            {
+                title: 'MOJA ROLA',
+                content: <p>Projektowanie Graficzne, Ilustracje</p>
+            },
+            {
+                title: 'WIĘCEJ INFO',
+                content: <p>Personal project</p>
+            },
+        ],
+        gallery: [
+            [
+                galleryData.soap[1], galleryData.soap[2], galleryData.soap[3], galleryData.soap[4], 
+            ],
+            [
+                galleryData.soap[5]
+            ],
+            [
+                galleryData.soap[6]
+            ],
+            [
+                galleryData.soap[7], galleryData.soap[8], galleryData.soap[9], galleryData.soap[10], 
+            ],
+            [
+                galleryData.soap[11]
+            ]
+        ]
+    },
+    thumbnailData: {
+        previewImg: 'tu bd url zdj do preview',
     }
 }
 
+// ilustracje
 projectsData[7] = {
     title: 'Ilustracje',
     route: 'ilustracje',
     previewData: {
         caption: 'kurde bela ładne ilustracje jakieś',
         img: projectPreviews.ilustracje,
+    },
+    contentData: {
+        coverImg: galleryData.soap[0],
+        year: '2019',
+        subtitle: 'Projekt opakownań oraz logo dla manufaktury ręcznie wytwarzającej mydła',
+        paragraphs: [
+            {
+                title: 'OPIS',
+                content: <Fragment><p><strong>mu.la</strong> czyli muzyczne laboratorium pozwalające na zaangażowanie, oprócz słuchu, najważniejszego w przypadku muzyki zmysłu, także zmysłów wzroku i dotyku. Czy zastanawialiście się kiedyś jak wygląda dźwięk, jaki jest w dotyku? Albo jak jest zbudowany instrument? Z <strong>mu.lą</strong> dzieci mogą zaobserwować powstawanie fal dźwiękowych, zbadać właściwości różnych materiałów wydających dźwięki oraz tworzyć własne wersje instrumentu.</p><p>Podczas zabawy kategoria błędnego doświadczenia nie istnieje – każde doświadczenie, nawet to zakończone niepowodzeniem jest wartościowe. Umożliwia to rozwój myślenia wyjętego ze schematów oraz angażuje wyobraźnię i całą pomysłowość dziecka.</p></Fragment>,
+            },
+            {
+                title: 'MOJA ROLA',
+                content: <p>Projektowanie Graficzne, Ilustracje</p>
+            },
+            {
+                title: 'WIĘCEJ INFO',
+                content: <p>Personal project</p>
+            },
+        ],
+        gallery: [
+            [
+                galleryData.soap[1], galleryData.soap[2], galleryData.soap[3], galleryData.soap[4], 
+            ],
+            [
+                galleryData.soap[5]
+            ],
+            [
+                galleryData.soap[6]
+            ],
+            [
+                galleryData.soap[7], galleryData.soap[8], galleryData.soap[9], galleryData.soap[10], 
+            ],
+            [
+                galleryData.soap[11]
+            ]
+        ]
+    },
+    thumbnailData: {
+        previewImg: 'tu bd url zdj do preview',
     }
 }
 
+// ulicznicy
 projectsData[8] = {
     title: 'Ulicznicy',
     route: 'ulicznicy',
     previewData: {
         caption: 'incididunt ut labore et dolore',
         img: projectPreviews.ulicznicy,
+    },
+    contentData: {
+        coverImg: galleryData.soap[0],
+        year: '2019',
+        subtitle: 'Projekt opakownań oraz logo dla manufaktury ręcznie wytwarzającej mydła',
+        paragraphs: [
+            {
+                title: 'OPIS',
+                content: <Fragment><p><strong>mu.la</strong> czyli muzyczne laboratorium pozwalające na zaangażowanie, oprócz słuchu, najważniejszego w przypadku muzyki zmysłu, także zmysłów wzroku i dotyku. Czy zastanawialiście się kiedyś jak wygląda dźwięk, jaki jest w dotyku? Albo jak jest zbudowany instrument? Z <strong>mu.lą</strong> dzieci mogą zaobserwować powstawanie fal dźwiękowych, zbadać właściwości różnych materiałów wydających dźwięki oraz tworzyć własne wersje instrumentu.</p><p>Podczas zabawy kategoria błędnego doświadczenia nie istnieje – każde doświadczenie, nawet to zakończone niepowodzeniem jest wartościowe. Umożliwia to rozwój myślenia wyjętego ze schematów oraz angażuje wyobraźnię i całą pomysłowość dziecka.</p></Fragment>,
+            },
+            {
+                title: 'MOJA ROLA',
+                content: <p>Projektowanie Graficzne, Ilustracje</p>
+            },
+            {
+                title: 'WIĘCEJ INFO',
+                content: <p>Personal project</p>
+            },
+        ],
+        gallery: [
+            [
+                galleryData.soap[1], galleryData.soap[2], galleryData.soap[3], galleryData.soap[4], 
+            ],
+            [
+                galleryData.soap[5]
+            ],
+            [
+                galleryData.soap[6]
+            ],
+            [
+                galleryData.soap[7], galleryData.soap[8], galleryData.soap[9], galleryData.soap[10], 
+            ],
+            [
+                galleryData.soap[11]
+            ]
+        ]
+    },
+    thumbnailData: {
+        previewImg: 'tu bd url zdj do preview',
     }
 }
 
+// album cover
 projectsData[9] = {
     title: <Fragment>Album&nbsp;cover</Fragment>,
     route: 'album-cover',
     previewData: {
         caption: 'Lorem ipsum dolor sit amet, consectetur',
         img: projectPreviews.albumCover,
+    },
+    contentData: {
+        coverImg: galleryData.soap[0],
+        year: '2019',
+        subtitle: 'Projekt opakownań oraz logo dla manufaktury ręcznie wytwarzającej mydła',
+        paragraphs: [
+            {
+                title: 'OPIS',
+                content: <Fragment><p><strong>mu.la</strong> czyli muzyczne laboratorium pozwalające na zaangażowanie, oprócz słuchu, najważniejszego w przypadku muzyki zmysłu, także zmysłów wzroku i dotyku. Czy zastanawialiście się kiedyś jak wygląda dźwięk, jaki jest w dotyku? Albo jak jest zbudowany instrument? Z <strong>mu.lą</strong> dzieci mogą zaobserwować powstawanie fal dźwiękowych, zbadać właściwości różnych materiałów wydających dźwięki oraz tworzyć własne wersje instrumentu.</p><p>Podczas zabawy kategoria błędnego doświadczenia nie istnieje – każde doświadczenie, nawet to zakończone niepowodzeniem jest wartościowe. Umożliwia to rozwój myślenia wyjętego ze schematów oraz angażuje wyobraźnię i całą pomysłowość dziecka.</p></Fragment>,
+            },
+            {
+                title: 'MOJA ROLA',
+                content: <p>Projektowanie Graficzne, Ilustracje</p>
+            },
+            {
+                title: 'WIĘCEJ INFO',
+                content: <p>Personal project</p>
+            },
+        ],
+        gallery: [
+            [
+                galleryData.soap[1], galleryData.soap[2], galleryData.soap[3], galleryData.soap[4], 
+            ],
+            [
+                galleryData.soap[5]
+            ],
+            [
+                galleryData.soap[6]
+            ],
+            [
+                galleryData.soap[7], galleryData.soap[8], galleryData.soap[9], galleryData.soap[10], 
+            ],
+            [
+                galleryData.soap[11]
+            ]
+        ]
+    },
+    thumbnailData: {
+        previewImg: 'tu bd url zdj do preview',
     }
 }
 
+// voicemail
 projectsData[10] = {
     title: 'Voicemail',
     route: 'voicemail',
     previewData: {
         caption: 'Excepteur sint occaecat cupidatat non proident',
         img: projectPreviews.voicemail,
+    },
+    contentData: {
+        coverImg: galleryData.soap[0],
+        year: '2019',
+        subtitle: 'Projekt opakownań oraz logo dla manufaktury ręcznie wytwarzającej mydła',
+        paragraphs: [
+            {
+                title: 'OPIS',
+                content: <Fragment><p><strong>mu.la</strong> czyli muzyczne laboratorium pozwalające na zaangażowanie, oprócz słuchu, najważniejszego w przypadku muzyki zmysłu, także zmysłów wzroku i dotyku. Czy zastanawialiście się kiedyś jak wygląda dźwięk, jaki jest w dotyku? Albo jak jest zbudowany instrument? Z <strong>mu.lą</strong> dzieci mogą zaobserwować powstawanie fal dźwiękowych, zbadać właściwości różnych materiałów wydających dźwięki oraz tworzyć własne wersje instrumentu.</p><p>Podczas zabawy kategoria błędnego doświadczenia nie istnieje – każde doświadczenie, nawet to zakończone niepowodzeniem jest wartościowe. Umożliwia to rozwój myślenia wyjętego ze schematów oraz angażuje wyobraźnię i całą pomysłowość dziecka.</p></Fragment>,
+            },
+            {
+                title: 'MOJA ROLA',
+                content: <p>Projektowanie Graficzne, Ilustracje</p>
+            },
+            {
+                title: 'WIĘCEJ INFO',
+                content: <p>Personal project</p>
+            },
+        ],
+        gallery: [
+            [
+                galleryData.soap[1], galleryData.soap[2], galleryData.soap[3], galleryData.soap[4], 
+            ],
+            [
+                galleryData.soap[5]
+            ],
+            [
+                galleryData.soap[6]
+            ],
+            [
+                galleryData.soap[7], galleryData.soap[8], galleryData.soap[9], galleryData.soap[10], 
+            ],
+            [
+                galleryData.soap[11]
+            ]
+        ]
+    },
+    thumbnailData: {
+        previewImg: 'tu bd url zdj do preview',
     }
 }
 

@@ -60,7 +60,6 @@ const Projects = ({location}) => {
     lazyLoad: 'progressive',
     speed: 400,
   }
-
   return (
     <Layout fontColor='inherit' location={location.pathname}>
     <SEO title="Projekty" keywords={[`karolina włoszek`, `product design`, `design`, `portfolio`]}/>

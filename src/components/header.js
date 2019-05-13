@@ -22,12 +22,12 @@ const HeaderContainer = styled.header`
         }
         .hoverable:after {
             right: 0;
-            background: ${props => props.color === 'inherit' ? 'black' : props.color };
+            background: ${props => props.color === 'inherit' ? '#282828' : props.color };
             transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
         }
         
         .hoverable:hover:before {
-            background: ${props => props.color === 'inherit' ? 'black' : props.color };
+            background: ${props => props.color === 'inherit' ? '#282828' : props.color };
             width: 100%;
             transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
         }
