@@ -5,7 +5,7 @@ import SEO from "../components/seo"
 import '../styles/global-styles.scss'
 import projectsData from '../project-data/projectsData'
 import Slider from "react-slick";
-import {Link} from 'gatsby'
+import PageLink from '../components/PageLink'
 import ProjectCaption from '../components/ProjectCaption'
 import useCursorScreenHalf from '../components/useCursorScreenHalf'
 
@@ -33,13 +33,13 @@ const Projects = ({location}) => {
         onMouseEnter={() => handleMouseEnter(i)}
         onMouseLeave={handleMouseLeave}
       >
-        <Link to={'/projects/' + project.route} key={'link' + project.title}>
+        <PageLink to={'/projects/' + project.route} key={'link' + project.title}>
           <img
             alt={'img' + project.title}
             src={project.previewData.img}
             className={isAnyHovered && hoveredIndex !== i ? 'out-of-focus' : null}
           />
-        </Link>
+        </PageLink>
         {isAnyHovered && hoveredIndex === i ? <ProjectCaption title={project.title} description={project.previewData.caption} cursorScreenHalf={cursorScreenHalf} /> : null}
       </div>
     )

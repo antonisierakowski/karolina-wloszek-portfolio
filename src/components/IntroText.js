@@ -1,16 +1,20 @@
 import React, { Fragment, useState } from 'react'
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 export default function IntroText({ children }) {
   return (
+    <p className="intro-text">
 
-      <p className="intro-text">
-          {children.split(' ').map((word, i) => (
-              <Fragment key={word + i}>
-                  <IntroWord word={word} />
-                  <span> </span>
-              </Fragment>
-          ))}
-      </p>
+      {children[0].split(' ').map((word, i) => (
+        <Fragment key={word + i}>
+          <IntroWord word={word} />
+          <span> </span>
+        </Fragment>
+      ))}
+      <AniLink cover bg='pink' to='/projects/'>
+        <IntroLetter char={children[1].props.children} />
+      </AniLink>
+    </p>
 
   );
 }

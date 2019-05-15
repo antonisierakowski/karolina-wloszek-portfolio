@@ -13,9 +13,11 @@ const IndexPage = ({location}) => (
       <div id='index-page' className='background'>
         <div className='center'>
           <div className='introduction-wrapper'>
-            <Fade duration={2000}><IntroText>
-              Hi, I'm Karolina, a freelance designer based in Wrocław. Ice cream gummies carrot cake chocolate bar tootsie roll. Liquorice macaroon soufflé powder gingerbread.
-            </IntroText></Fade>
+            <Fade duration={1500}>
+              <IntroText>
+                Hi, I'm Karolina, a freelance designer based in Wrocław. Ice cream gummies carrot cake chocolate bar tootsie roll. Liquorice macaroon soufflé gingerbread. <span>Tu se obejrzyj.</span>
+              </IntroText>
+            </Fade>
           </div>
         </div>
       </div>

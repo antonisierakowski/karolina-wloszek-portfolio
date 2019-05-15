@@ -84,10 +84,13 @@
         }
 
         .slick-prev::before {
+            content: '◁';
             right: 0;
         }
         
         .slick-next::before {
+            content: '◁';
+            transform: rotate(180deg);
             left: 0;
         }
       

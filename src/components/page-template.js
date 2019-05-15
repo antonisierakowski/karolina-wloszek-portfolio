@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect, useRef } from 'react'
+import React, { Fragment, useEffect, useRef, useState } from 'react'
 import '../styles/global-styles.scss'
 import '../styles/project-template.scss'
 import Layout from "./layout"
@@ -7,13 +7,18 @@ import { window, document } from 'browser-monads'
 import smoothscroll from 'smoothscroll-polyfill'
 import useOnTopPosition from '../components/useOnTopPosition'
 import { detect } from 'detect-browser'
+// import PageLink from '../components/PageLink'
+import { navigate } from 'gatsby'
 
-export default function Template({data, location}) {
+
+export default function Template({data, nextData, location}) {
     const isOnTop = useOnTopPosition()
     const infoRef = useRef(null)
     const browser = detect().name
-    // window.__forceSmoothScrollPolyfill__ = true;
     smoothscroll.polyfill()
+
+    const [ nextPrjHov, setNextPrjHov ] = useState(false);
+    const [ linkTriggered, setLinkTriggered ] = useState(false)
 
     useEffect(() => {
         const scrollToInfo = () => window.scrollTo({
@@ -54,6 +59,14 @@ export default function Template({data, location}) {
     
     const handleCoverClick = () => {
         window.scrollTo({top: infoRef.current.offsetTop, behavior: 'smooth'})
+    }
+
+    const handleNextProjectClick = () => {
+        setLinkTriggered(true)
+        setTimeout(() => {
+            navigate('/projects/' + nextData.route)
+        }, 1000)
+        
     }
 
     return (
@@ -122,30 +135,44 @@ export default function Template({data, location}) {
                         return null;
                     })}
                 </section>
+                
 
+                <section className='project-bottom' style={{backgroundImage: `url(${nextData.contentData.coverImg})`}}>
+                    <div className={nextPrjHov ? 'background active' : 'background'}>
+                        <div className={linkTriggered ? 'next-project active' : 'next-project'} >
+                            <div className='wrapper'>
+                                <h1 className='title' onClick={handleNextProjectClick} onMouseEnter={() => setNextPrjHov(true)} onMouseLeave={() => setNextPrjHov(false)}>
+                                    {/* <PageLink to={'/projects/' + nextData.route}> */}
+                                        {nextData.title}
+                                    {/* </PageLink> */}
+                                </h1>
+                                <span className='subtitle' onClick={handleNextProjectClick} onMouseEnter={() => setNextPrjHov(true)} onMouseLeave={() => setNextPrjHov(false)}>
+                                    {/* <PageLink to={'/projects/' + nextData.route}> */}
+                                        – {nextData.previewData.caption}
+                                    {/* </PageLink> */}
+                                </span>
+
+                            </div>    
+                            <span className='see-next' onClick={handleNextProjectClick} onMouseEnter={() => setNextPrjHov(true)} onMouseLeave={() => setNextPrjHov(false)}>
+                                {/* <PageLink to={'/projects/' + nextData.route}> */}
+                                    See the next project ▶︎
+                                {/* </PageLink> */}
+                            </span>
+                        </div>
+                        <div className='center'>
+                            <div className='footer'>
+                                <span>© 2019 – karolina włoszek</span>
+                            </div>
+                        </div>
+                        <div className={linkTriggered ? 'transition-circle active' : 'transition-circle'}/>
+                    </div>
+                </section>
+                    
             </div>
         </Layout>
     )
 }
 
+// <img src={nextData.contentData.coverImg}/>
+// style={{background: `url(${nextData.contentData.coverImg})`}}
 
-
-
-
-// // scrollowanie ze stackoverflow
-// function SmoothVerticalScrolling(e, time, where) {
-//     var eTop = e.getBoundingClientRect().top;
-//     var eAmt = eTop / 100;
-//     var curTime = 0;
-//     while (curTime <= time) {
-//         window.setTimeout(SVS_B, curTime, eAmt, where);
-//         curTime += time / 100;
-//     }
-// }
-
-// function SVS_B(eAmt, where) {
-//     if(where == "center" || where == "")
-//         window.scrollBy(0, eAmt / 2);
-//     if (where == "top")
-//         window.scrollBy(0, eAmt);
-// }

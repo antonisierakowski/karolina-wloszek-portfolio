@@ -1,7 +1,7 @@
 import React from "react"
-import { Link } from 'gatsby'
 import '../styles/header.scss'
 import styled from 'styled-components'
+import PageLink from './PageLink'
 
 const HeaderContainer = styled.header`
   color: ${props => props.color};
@@ -47,17 +47,17 @@ const Header = ({fontColor, location}) => {
   return (
     <HeaderContainer id='header' color={fontColor}>
       <div className='center'>
-        <Link to='/'>Karolina Włoszek</Link>
+        <PageLink to='/'>Karolina Włoszek</PageLink>
         <ul>
           <li>
-            <Link to={location !== '/projects/' ? '/projects/' : '/'} className={location !== '/projects/' ? 'hoverable' : null}>
+            <PageLink to={location !== '/projects/' ? '/projects/' : '/'} className={location !== '/projects/' ? 'hoverable' : null}>
               {location !== '/projects/' ? 'PROJEKTY' : 'X'}
-            </Link>
+            </PageLink>
           </li>
           <li>
-            <Link to={location !== '/about-me/' ? '/about-me/' : '/'} className={location !== '/about-me/' ? 'hoverable' : null}>
+            <PageLink to={location !== '/about-me/' ? '/about-me/' : '/'} className={location !== '/about-me/' ? 'hoverable' : null}>
               {location !== '/about-me/' ? 'O MNIE' : 'X'}
-            </Link>
+            </PageLink>
           </li>
         </ul>
       </div>

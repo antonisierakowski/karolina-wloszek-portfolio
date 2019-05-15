@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { document, window } from 'browser-monads'
 
 export default function useCursorScreenHalf() {
-    const [ cursorScreenHalf, setCursorScreenHalf ] = useState(null)
+    const [ cursorScreenHalf, setCursorScreenHalf ] = useState('right')
     
     useEffect(() => {
 

@@ -34,7 +34,6 @@
                         line-height: 100%;
                         overflow: hidden;
                     }
-    
                     .hovered {
                         animation-name: stretch;
                         animation-duration: 0.15s;
@@ -48,9 +47,28 @@
                         animation-duration: 0.25s;
                         animation-timing-function: linear;
                     }
+                    a {
+                        // color: rgb(231,185,176);
+                        animation-name: colors;
+                        animation-duration: 1.5s;
+                        animation-iteration-count: infinite;
+                    }
                 }
             }
         }
+    }
+}
+
+@keyframes colors {
+    from, 
+    0% {
+        color: rgb(231,185,176);
+    }
+    50% {
+        color: darken(rgb(231, 154, 139), 3%);
+    }
+    100% {
+        color: rgb(231,185,176);
     }
 }
 
