@@ -9,7 +9,7 @@ projectsData[0] = {
     title: 'mu.la',
     route: 'mu-la',
     previewData: {
-        caption: 'Batchelor’s Thesis, Product Design',
+        caption: 'Bachelor’s Thesis, Product Design',
         img: projectPreviews.mula,
     },
     contentData: {
@@ -164,11 +164,11 @@ projectsData[3] = {
     title: 'Składak',
     route: 'skladak',
     previewData: {
-        caption: 'elit, sed do eiusmod tempor incididunt',
+        caption: 'Product Design',
         img: projectPreviews.skladak,
     },
     contentData: {
-        coverImg: galleryData.soap[0],
+        coverImg: galleryData.skladak[0],
         year: '2019',
         subtitle: 'Projekt opakownań oraz logo dla manufaktury ręcznie wytwarzającej mydła',
         paragraphs: [
@@ -187,19 +187,19 @@ projectsData[3] = {
         ],
         gallery: [
             [
-                galleryData.soap[1], galleryData.soap[2], galleryData.soap[3], galleryData.soap[4], 
+                galleryData.skladak[1], galleryData.skladak[2]
             ],
             [
-                galleryData.soap[5]
+                galleryData.skladak[3]
             ],
             [
-                galleryData.soap[6]
+                galleryData.skladak[4], galleryData.skladak[5]
             ],
             [
-                galleryData.soap[7], galleryData.soap[8], galleryData.soap[9], galleryData.soap[10], 
+                galleryData.skladak[6]
             ],
             [
-                galleryData.soap[11]
+                galleryData.skladak[7]
             ]
         ]
     },
@@ -311,7 +311,7 @@ projectsData[6] = {
     title: 'Cośtam',
     route: 'costam',
     previewData: {
-        caption: 'Ut enim ad minim veniam, quis',
+        caption: 'Graphic design, Illustration',
         img: projectPreviews.costam,
     },
     contentData: {
@@ -409,7 +409,7 @@ projectsData[8] = {
     title: 'Ulicznicy',
     route: 'ulicznicy',
     previewData: {
-        caption: 'incididunt ut labore et dolore',
+        caption: 'Graphic Design, Ilustration',
         img: projectPreviews.ulicznicy,
     },
     contentData: {

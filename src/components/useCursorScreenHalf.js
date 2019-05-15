@@ -12,9 +12,11 @@ export default function useCursorScreenHalf() {
             setCursorScreenHalf(mousePosition > width/2 ? 'right' : 'left')
         }
 
-        document.addEventListener('mousemove', event => checkScreenHalf(event))
+        document.addEventListener('mousemove', checkScreenHalf)
 
-        return () => document.removeEventListener('mousemove', event => checkScreenHalf(event))
+        return () => {
+            document.removeEventListener('mousemove', checkScreenHalf)
+        }
 
     }, [])
 

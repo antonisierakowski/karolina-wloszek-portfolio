@@ -16,20 +16,23 @@
             flex-direction: row-reverse;
             align-items: center;
             height: 100vh;
-            div {
+            div, .react-reveal {
                 width: 50%;
-                
+        
                 color: white;
                 font-size: 2.5rem;
-                line-height: 100%;
+                line-height: 40%;
                 font-weight: 700;
                 .intro-text {
                     width: 100%;
-                    
+                    user-select: none;
+                    cursor: default;
                     .single-letter {
                         display: inline-block;
                         transform-origin: 50% 120%;
                         
+                        line-height: 100%;
+                        overflow: hidden;
                     }
     
                     .hovered {

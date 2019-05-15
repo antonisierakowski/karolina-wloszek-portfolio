@@ -27,6 +27,16 @@ import mula5_1 from '../images/gallery/mu-la/5-1.jpg'
 import mula5_2 from '../images/gallery/mu-la/5-2.jpg'
 import mula6 from '../images/gallery/mu-la/6.jpg'
 
+import skladakCover from '../images/gallery/skladak/cover.jpg'
+import skladak1_1 from '../images/gallery/skladak/1-1.jpg'
+import skladak1_2 from '../images/gallery/skladak/1-2.jpg'
+import skladak2 from '../images/gallery/skladak/2.png'
+import skladak3_1 from '../images/gallery/skladak/3-1.jpg'
+import skladak3_2 from '../images/gallery/skladak/3-2.jpg'
+import skladak4 from '../images/gallery/skladak/4.jpg'
+import skladak5 from '../images/gallery/skladak/5.jpg'
+
+
 
 const galleryData = {
     mula: [
@@ -37,6 +47,9 @@ const galleryData = {
     ],
     rogi: [
         rogiCover, rogi1_1, rogi1_2, rogi2, rogi3
+    ],
+    skladak: [
+        skladakCover, skladak1_1, skladak1_2, skladak2, skladak3_1, skladak3_2, skladak4, skladak5
     ]
 }
 
