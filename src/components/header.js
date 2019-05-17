@@ -44,6 +44,7 @@ const HeaderContainer = styled.header`
 `
 
 const Header = ({fontColor, location}) => {
+  console.log('nowa wersja3')
   return (
     <HeaderContainer id='header' color={fontColor}>
       <div className='center'>

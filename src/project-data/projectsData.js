@@ -169,8 +169,8 @@ projectsData[3] = {
     },
     contentData: {
         coverImg: galleryData.skladak[0],
-        year: '2019',
-        subtitle: 'Projekt opakownań oraz logo dla manufaktury ręcznie wytwarzającej mydła',
+        year: '2017',
+        subtitle: 'Projekt stołka - pomocnika domowego',
         paragraphs: [
             {
                 title: 'OPIS',
@@ -213,43 +213,34 @@ projectsData[4] = {
     title: 'Moduu',
     route: 'moduu',
     previewData: {
-        caption: 'quis nostrud exercitation ullamco laboris nisi ut aliquip',
+        caption: 'Product design',
         img: projectPreviews.moduu,
     },
     contentData: {
-        coverImg: galleryData.soap[0],
-        year: '2019',
-        subtitle: 'Projekt opakownań oraz logo dla manufaktury ręcznie wytwarzającej mydła',
+        coverImg: galleryData.moduu[0],
+        year: '2018',
+        subtitle: 'Modułowy system przechowywania obok drzwi',
         paragraphs: [
             {
                 title: 'OPIS',
-                content: <Fragment><p><strong>mu.la</strong> czyli muzyczne laboratorium pozwalające na zaangażowanie, oprócz słuchu, najważniejszego w przypadku muzyki zmysłu, także zmysłów wzroku i dotyku. Czy zastanawialiście się kiedyś jak wygląda dźwięk, jaki jest w dotyku? Albo jak jest zbudowany instrument? Z <strong>mu.lą</strong> dzieci mogą zaobserwować powstawanie fal dźwiękowych, zbadać właściwości różnych materiałów wydających dźwięki oraz tworzyć własne wersje instrumentu.</p><p>Podczas zabawy kategoria błędnego doświadczenia nie istnieje – każde doświadczenie, nawet to zakończone niepowodzeniem jest wartościowe. Umożliwia to rozwój myślenia wyjętego ze schematów oraz angażuje wyobraźnię i całą pomysłowość dziecka.</p></Fragment>,
+                content: <Fragment><p><strong>moduu</strong> czyli przestrzeń na, przy, obok drzwi pozwalająca na przechowywanie. Modułowy system umożliwia swobodne rozmieszczanie elementów w kształt pożądany przez użytkownika oraz wielokrotne ich powielanie. Pozwala na kreowanie przestrzeni przy drzwiach.</p></Fragment>,
             },
             {
                 title: 'MOJA ROLA',
-                content: <p>Projektowanie Graficzne, Ilustracje</p>
+                content: <p>Projektowanie produktu</p>
             },
             {
                 title: 'WIĘCEJ INFO',
-                content: <p>Personal project</p>
+                content: <Fragment><p>Wyróżniona w konkursie <strong>PORTA BY ME 2017 - 4 DOORS</strong> koncepcja na obiekt NA, PRZY OBOK drzwi.</p><p>Projekt realizowany w grupie projektowej z Sonią Sudyka.</p></Fragment>
             },
         ],
         gallery: [
             [
-                galleryData.soap[1], galleryData.soap[2], galleryData.soap[3], galleryData.soap[4], 
+                galleryData.moduu[1], galleryData.moduu[2], 
             ],
             [
-                galleryData.soap[5]
+                galleryData.moduu[3]
             ],
-            [
-                galleryData.soap[6]
-            ],
-            [
-                galleryData.soap[7], galleryData.soap[8], galleryData.soap[9], galleryData.soap[10], 
-            ],
-            [
-                galleryData.soap[11]
-            ]
         ]
     },
     thumbnailData: {
@@ -413,7 +404,7 @@ projectsData[8] = {
         img: projectPreviews.ulicznicy,
     },
     contentData: {
-        coverImg: galleryData.soap[0],
+        coverImg: galleryData.ulicznicy[0],
         year: '2019',
         subtitle: 'Projekt opakownań oraz logo dla manufaktury ręcznie wytwarzającej mydła',
         paragraphs: [
@@ -432,20 +423,8 @@ projectsData[8] = {
         ],
         gallery: [
             [
-                galleryData.soap[1], galleryData.soap[2], galleryData.soap[3], galleryData.soap[4], 
+                galleryData.ulicznicy[1]
             ],
-            [
-                galleryData.soap[5]
-            ],
-            [
-                galleryData.soap[6]
-            ],
-            [
-                galleryData.soap[7], galleryData.soap[8], galleryData.soap[9], galleryData.soap[10], 
-            ],
-            [
-                galleryData.soap[11]
-            ]
         ]
     },
     thumbnailData: {

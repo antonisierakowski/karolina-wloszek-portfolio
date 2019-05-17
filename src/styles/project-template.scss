@@ -9,10 +9,34 @@
     }
 
     .project-cover {
+        position: relative;
         width: 100vw;
         height: 100vh;
         background-size: cover;
         background-position: center;
+        cursor: pointer;
+        &::after {
+            content: '↓';
+            
+            right: 5%;
+            bottom: 15%;
+            position: absolute;
+            font-size: 8rem;
+
+            animation: pulse 3s infinite linear;
+        }
+        @keyframes pulse {
+            from,
+            0% {
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
     }
 
     .center {
@@ -29,6 +53,7 @@
                 .title {
                     font-size: 5rem;
                     font-weight: 700;
+                    margin: 0;
                     
                 }
                 .year {
@@ -41,7 +66,7 @@
                 width: 50%;
                 display: flex;
                 flex-direction: column;
-                justify-content: space-between;
+                // justify-content: space-between;
 
                 .subtitle {
                     font-family: $primary-font;
@@ -118,15 +143,19 @@
     .project-bottom {
         background-size: cover;
         background-position: center;
-        
+        background-color: transparent;
         .background {
             height: 100vh;
             background: white;
-            transition: transform 2s;
+
             &.active {
                 
                 mix-blend-mode: lighten;
-                transform: scale(1.4);
+                h1, span {
+                    
+                    transform: scale(1.4);
+                }
+                
                 
             }
             position: relative;
@@ -144,7 +173,12 @@
                 
                 transition: transform 1s;
                 &.active {
-                    transform: scale(1.4);
+                    
+                    h1, span {
+                        transition: transform 1s;
+                        font-size: 5rem;
+                        transform: scale(2, 2);
+                    }
                     
                 }
                 
@@ -177,7 +211,7 @@
                 }
     
                 h1, span {
-                   
+                    transition: 2s;
                 }
             
             }
@@ -195,24 +229,24 @@
                 }
             }
             overflow: hidden;
-            .transition-circle {
-                position: absolute;
-                top: -100vh;
-                left: -100vh;
-                background: black;
-                width: 0;
-                height: 0;
-                border-radius: 50%;
-                transition: 2s;
-                pointer-events: none;
-                transform-origin: 50% 50%;
-                &.active {
-                    top: -100vh;
-                    left: -100vh;
-                    width: 400vh;
-                    height: 400vh;
-                }
-            }
+            // .transition-circle {
+            //     position: absolute;
+            //     top: -100vh;
+            //     left: -100vh;
+            //     background: black;
+            //     width: 0;
+            //     height: 0;
+            //     border-radius: 50%;
+            //     transition: 2s;
+            //     pointer-events: none;
+            //     transform-origin: 50% 50%;
+            //     &.active {
+            //         top: -100vh;
+            //         left: -100vh;
+            //         width: 400vh;
+            //         height: 400vh;
+            //     }
+            // }
         }
         
     }
