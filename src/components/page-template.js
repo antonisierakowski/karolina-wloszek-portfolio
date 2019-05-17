@@ -15,7 +15,10 @@ export default function Template({data, nextData, location}) {
     const isOnTop = useOnTopPosition()
     const infoRef = useRef(null)
     const browser = detect().name
-    smoothscroll.polyfill()
+    if (typeof document !== 'undefined' && typeof window !== window) {
+        smoothscroll.polyfill()
+    }
+    
 
     const [ nextPrjHov, setNextPrjHov ] = useState(false);
     const [ linkTriggered, setLinkTriggered ] = useState(false)
