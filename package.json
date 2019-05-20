@@ -21,11 +21,12 @@
     "gatsby-transformer-sharp": "^2.1.19",
     "gsap": "^2.1.2",
     "node-sass": "^4.12.0",
-    "prop-types": "^15.7.2",
+    "patch-package": "^6.1.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
     "react-reveal": "^1.2.2",
+    "react-scroll": "^1.7.11",
     "react-slick": "^0.24.0",
     "slick-carousel": "^1.8.1",
     "smoothscroll-polyfill": "^0.4.4",
@@ -45,7 +46,7 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
+    "postinstall": "patch-package"
   },
   "repository": {
     "type": "git",

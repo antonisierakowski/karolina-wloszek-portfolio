@@ -257,7 +257,7 @@ projectsData[5] = {
         img: projectPreviews.pokojZabaw,
     },
     contentData: {
-        coverImg: galleryData.soap[0],
+        coverImg: galleryData.pokojZabaw[0],
         year: '2019',
         subtitle: 'Projekt opakownań oraz logo dla manufaktury ręcznie wytwarzającej mydła',
         paragraphs: [
@@ -276,19 +276,22 @@ projectsData[5] = {
         ],
         gallery: [
             [
-                galleryData.soap[1], galleryData.soap[2], galleryData.soap[3], galleryData.soap[4], 
+                galleryData.pokojZabaw[1]
             ],
             [
-                galleryData.soap[5]
+                galleryData.pokojZabaw[2]
             ],
             [
-                galleryData.soap[6]
+                galleryData.pokojZabaw[3]
             ],
             [
-                galleryData.soap[7], galleryData.soap[8], galleryData.soap[9], galleryData.soap[10], 
+                galleryData.pokojZabaw[4]
             ],
             [
-                galleryData.soap[11]
+                galleryData.pokojZabaw[5], galleryData.pokojZabaw[6]
+            ],
+            [
+                galleryData.pokojZabaw[7]
             ]
         ]
     },

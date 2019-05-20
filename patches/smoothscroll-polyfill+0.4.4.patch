@@ -1,0 +1,16 @@
+diff --git a/node_modules/smoothscroll-polyfill/.DS_Store b/node_modules/smoothscroll-polyfill/.DS_Store
+new file mode 100644
+index 0000000..9d6b37d
+Binary files /dev/null and b/node_modules/smoothscroll-polyfill/.DS_Store differ
+diff --git a/node_modules/smoothscroll-polyfill/dist/smoothscroll.js b/node_modules/smoothscroll-polyfill/dist/smoothscroll.js
+index 3370d02..5286b4d 100644
+--- a/node_modules/smoothscroll-polyfill/dist/smoothscroll.js
++++ b/node_modules/smoothscroll-polyfill/dist/smoothscroll.js
+@@ -1,5 +1,7 @@
+ /* smoothscroll v0.4.4 - 2019 - Dustan Kasten, Jeremias Menichelli - MIT License */
+ (function () {
++  var window = require('browser-monads').window
++  var document = require('browser-monads').document
+   'use strict';
+ 
+   // polyfill

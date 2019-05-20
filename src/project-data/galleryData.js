@@ -41,8 +41,17 @@ import moduu1_1 from '../images/gallery/moduu/1-1.jpg'
 import moduu1_2 from '../images/gallery/moduu/1-2.jpg'
 import moduu2 from '../images/gallery/moduu/2.jpg'
 
-import ulicznicyCover from '../images/gallery/uliczncy/cover.jpg'
-import ulicznicy1 from '../images/gallery/uliczncy/1.jpg'
+import ulicznicyCover from '../images/gallery/ulicznicy/cover.jpg'
+import ulicznicy1 from '../images/gallery/ulicznicy/1.jpg'
+
+import pokojZabawCover from '../images/gallery/pokoj-zabaw/cover.jpg'
+import pokojZabaw1 from '../images/gallery/pokoj-zabaw/1.jpg'
+import pokojZabaw2 from '../images/gallery/pokoj-zabaw/2.jpg'
+import pokojZabaw3 from '../images/gallery/pokoj-zabaw/3.jpg'
+import pokojZabaw4 from '../images/gallery/pokoj-zabaw/4.jpg'
+import pokojZabaw5_1 from '../images/gallery/pokoj-zabaw/5-1.jpg'
+import pokojZabaw5_2 from '../images/gallery/pokoj-zabaw/5-2.jpg'
+import pokojZabaw6 from '../images/gallery/pokoj-zabaw/6.jpg'
 
 
 const galleryData = {
@@ -63,6 +72,9 @@ const galleryData = {
     ],
     ulicznicy: [
         ulicznicyCover, ulicznicy1
+    ],
+    pokojZabaw: [
+        pokojZabawCover, pokojZabaw1, pokojZabaw2, pokojZabaw3, pokojZabaw4, pokojZabaw5_1, pokojZabaw5_2, pokojZabaw6
     ]
 }
 

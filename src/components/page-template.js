@@ -4,7 +4,7 @@ import '../styles/project-template.scss'
 import Layout from "./layout"
 import SEO from "./seo"
 import { window, document } from 'browser-monads'
-// import smoothscroll from 'smoothscroll-polyfill'
+import smoothscroll from 'smoothscroll-polyfill'
 import useOnTopPosition from '../components/useOnTopPosition'
 import { detect } from 'detect-browser'
 // import PageLink from '../components/PageLink'
@@ -15,9 +15,7 @@ export default function Template({data, nextData, location}) {
     const isOnTop = useOnTopPosition()
     const infoRef = useRef(null)
     const browser = detect().name
-    // if (typeof document !== 'undefined' && typeof window !== window) {
-    //     smoothscroll.polyfill()
-    // }
+    smoothscroll.polyfill()
     
 
     const [ nextPrjHov, setNextPrjHov ] = useState(false);
@@ -29,6 +27,9 @@ export default function Template({data, nextData, location}) {
             left: 0,
             behavior: 'smooth',
         })
+        // const scrollToInfo = ()  => {
+        //     Scroll.animateScroll.scrollTo(infoRef.current.offsetTop)
+        // }
 
         let handleScroll;
 
