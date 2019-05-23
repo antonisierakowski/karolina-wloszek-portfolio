@@ -28,13 +28,22 @@
         @keyframes pulse {
             from,
             0% {
-                opacity: 0;
+                // opacity: 0;
+            }
+
+            25% {
+                transform: translateY(-10px)
             }
             50% {
-                opacity: 1;
+                // opacity: 1;
+                transform: translateY(0)
+            }
+
+            75% {
+                transform: translateY(-10px)
             }
             100% {
-                opacity: 0;
+                // opacity: 0;
             }
         }
     }

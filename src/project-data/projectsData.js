@@ -86,7 +86,10 @@ projectsData[1] = {
         ],
         gallery: [
             [
-                galleryData.soap[1], galleryData.soap[2], galleryData.soap[3], galleryData.soap[4], 
+                galleryData.soap[1], galleryData.soap[2],
+            ],
+            [
+                galleryData.soap[3], galleryData.soap[4],
             ],
             [
                 galleryData.soap[5]
@@ -95,7 +98,10 @@ projectsData[1] = {
                 galleryData.soap[6]
             ],
             [
-                galleryData.soap[7], galleryData.soap[8], galleryData.soap[9], galleryData.soap[10], 
+                galleryData.soap[7], galleryData.soap[8],
+            ],
+            [
+                galleryData.soap[9], galleryData.soap[10],
             ],
             [
                 galleryData.soap[11]

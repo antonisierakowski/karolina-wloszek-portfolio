@@ -7,7 +7,7 @@ import { window, document } from 'browser-monads'
 import smoothscroll from 'smoothscroll-polyfill'
 import useOnTopPosition from '../components/useOnTopPosition'
 import { detect } from 'detect-browser'
-// import PageLink from '../components/PageLink'
+import PageLink from '../components/PageLink'
 import { navigate } from 'gatsby'
 
 
@@ -45,7 +45,8 @@ export default function Template({data, nextData, location}) {
             }
         } else {
             handleScroll = event => {
-                if (event.wheelDelta < 0) {
+                event.preventDefault()
+                if (event.wheelDelta < 0 && event.wheelDelta > -100) {
                     scrollToInfo()
                     setTimeout(() => {
                         scrollToInfo()
@@ -147,21 +148,21 @@ export default function Template({data, nextData, location}) {
                         <div className={linkTriggered ? 'next-project active' : 'next-project'}>
                             <div className='wrapper'>
                                 <h1 className='title' onClick={handleNextProjectClick} onMouseEnter={() => setNextPrjHov(true)} onMouseLeave={() => setNextPrjHov(false)}>
-                                    {/* <PageLink to={'/projects/' + nextData.route}> */}
+                                    <PageLink to={'/projects/' + nextData.route}>
                                         {nextData.title}
-                                    {/* </PageLink> */}
+                                    </PageLink>
                                 </h1>
                                 <span className='subtitle' onClick={handleNextProjectClick} onMouseEnter={() => setNextPrjHov(true)} onMouseLeave={() => setNextPrjHov(false)}>
-                                    {/* <PageLink to={'/projects/' + nextData.route}> */}
+                                    <PageLink to={'/projects/' + nextData.route}>
                                         – {nextData.previewData.caption}
-                                    {/* </PageLink> */}
+                                    </PageLink>
                                 </span>
 
                             </div>    
                             <span className='see-next' onClick={handleNextProjectClick} onMouseEnter={() => setNextPrjHov(true)} onMouseLeave={() => setNextPrjHov(false)}>
-                                {/* <PageLink to={'/projects/' + nextData.route}> */}
+                                <PageLink to={'/projects/' + nextData.route}>
                                     See the next project ▶︎
-                                {/* </PageLink> */}
+                                </PageLink>
                             </span>
                         </div>
                         <div className='center'>
