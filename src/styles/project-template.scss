@@ -147,7 +147,7 @@
         .background {
             height: 100vh;
             background: white;
-
+            transition: opacity 2s;
             &.active {
                 
                 mix-blend-mode: lighten;

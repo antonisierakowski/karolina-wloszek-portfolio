@@ -143,8 +143,8 @@ export default function Template({data, nextData, location}) {
                 
 
                 <section className='project-bottom' style={{backgroundImage: `url(${nextData.contentData.coverImg})`}}>
-                    <div className={nextPrjHov ? 'background active' : 'background'}>
-                        <div className={linkTriggered ? 'next-project active' : 'next-project'} >
+                    <div className={nextPrjHov ? 'background active' : 'background'} style={linkTriggered ? {opacity: '0'} : null}>
+                        <div className={linkTriggered ? 'next-project active' : 'next-project'}>
                             <div className='wrapper'>
                                 <h1 className='title' onClick={handleNextProjectClick} onMouseEnter={() => setNextPrjHov(true)} onMouseLeave={() => setNextPrjHov(false)}>
                                     {/* <PageLink to={'/projects/' + nextData.route}> */}
