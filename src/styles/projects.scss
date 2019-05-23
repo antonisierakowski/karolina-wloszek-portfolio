@@ -81,17 +81,18 @@
             position: absolute;
             top: 0;
             opacity: 0.75;
+            transform: scale(0.2);
+            transform-origin: 50% 0;
         }
 
         .slick-prev::before {
-            content: '◁';
-            right: 0;
+            content: url('../images/arrow-prev.png');
+            right: -200%;
         }
         
         .slick-next::before {
-            content: '◁';
-            transform: rotate(180deg);
-            left: 0;
+            content: url('../images/arrow-next.png');
+            left: -200%;
         }
       
 
