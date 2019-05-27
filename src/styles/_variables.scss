@@ -1,6 +1,9 @@
 @import 'fonts';
 
+$large-desktop-site-width: calc(100vw - 16.66vw);
 $desktop-site-width: calc(100vw - 16.66vw);
+$tablet-site-width: calc(100vw - 16.66vw);
+$mobile-site-width: calc(100vw - 16.66vw);
 
 $primary-font: 'Crimson Text', serif;
 $secondary-font: 'Montserrat', sans-serif;

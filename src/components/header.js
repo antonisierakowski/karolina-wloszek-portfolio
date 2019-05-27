@@ -39,11 +39,10 @@ const HeaderContainer = styled.header`
         }
     }
   }
-
-  
 `
 
 const Header = ({fontColor, location}) => {
+
   return (
     <HeaderContainer id='header' color={fontColor}>
       <div className='center'>
@@ -62,10 +61,27 @@ const Header = ({fontColor, location}) => {
         </ul>
       </div>
     </HeaderContainer>
-
   )
 }
 
 
+
+// {/* <HeaderContainer id='header' color={fontColor}>
+// <div className='center'>
+//   <PageLink to='/'>Karolina Włoszek</PageLink>
+//   <ul>
+//     <li>
+//       <PageLink to='/projects/' className='hoverable' activeClassName='active-link'>
+//         PROJEKTY
+//       </PageLink>
+//     </li>
+//     <li>
+//       <PageLink to='/about-me/' className='hoverable' activeClassName='active-link'>
+//         O MNIE
+//       </PageLink>
+//     </li>
+//   </ul>
+// </div>
+// </HeaderContainer> */}
 
 export default Header

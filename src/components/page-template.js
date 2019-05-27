@@ -79,7 +79,11 @@ export default function Template({data, nextData, location}) {
         <Layout fontColor='inherit' location={location}>
             <SEO title={ typeof data.title === 'string' ? data.title : data.title.props.children } keywords={[`karolina włoszek`, `product design`, `design`, `portfolio`]} />
             <div id='project-page' className='background'>
-                <section className='project-cover' style={{backgroundImage: `url(${data.contentData.coverImg})`}} onClick={handleCoverClick} />
+                <section className='project-cover' style={{backgroundImage: `url(${data.contentData.coverImg})`}} onClick={handleCoverClick} >
+                    <div className='scroll-indicator'>
+                        <div><span>Scroll</span></div>
+                    </div>
+                </section>
 
                 
                 <div className='center' ref={infoRef}>

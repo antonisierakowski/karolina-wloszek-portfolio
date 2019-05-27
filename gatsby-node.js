@@ -33,6 +33,7 @@ exports.onCreateWebpackConfig = ({
             __DEVELOPMENT__: stage === `develop` || stage === `develop-html`,
         }),
         new ImageminPlugin({
+            disable: process.env.NODE_ENV !== 'production', // Disable during development
             jpegtran: {
                 progressive: true
             },

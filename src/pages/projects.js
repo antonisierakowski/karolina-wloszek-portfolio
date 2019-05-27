@@ -59,6 +59,25 @@ const Projects = ({location}) => {
     slidesToScroll: 2,
     lazyLoad: 'progressive',
     speed: 400,
+    responsive: [
+      {
+        breakpoint: 599,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: true,
+          swipeToSlide: true,
+        }
+      },
+      {
+        breakpoint: 899,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          swipeToSlide: true,
+        }
+      },
+    ]
   }
   
   return (

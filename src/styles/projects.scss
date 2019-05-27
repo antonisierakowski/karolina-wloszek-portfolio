@@ -24,10 +24,10 @@
         .slide-container {
             position: relative;
             img {
-                width: 13rem;
+                width: 14rem;
                 display: block;
                 margin: auto;
-                transition: 0.2s;
+                transition: opacity 0.2s;
             }
             .out-of-focus {
                 filter: opacity(20%);
@@ -70,7 +70,7 @@
 
             &:hover {
                 &::before {
-                    opacity: 1;
+                    opacity: 0.75;
                 }
             }
         }
@@ -80,8 +80,8 @@
             font-size: 2rem;
             position: absolute;
             top: 0;
-            opacity: 0.75;
-            transform: scale(0.2);
+            opacity: 1;
+            transform: scale(0.15);
             transform-origin: 50% 0;
         }
 

@@ -3,9 +3,24 @@
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  font-size: 100%;
-  
+  font-size: 112.5%;
+  @include mobile {
+    font-size: 90%;
+  }
+  @include tablet {
+    font-size: 100%;
+  }
+  @include desktop {
+    font-size: 112.5%;
+  }
+  @include large-desktop {
+    font-size: 112.5%;
+  }
+  box-sizing: border-box;
 }
+
+
+
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
@@ -13,13 +28,10 @@ body {
   font-family: $primary-font;
 }
 
-* {
-  box-sizing: border-box; 
-}
-
 .center {
   margin: 0 auto;
   width: $desktop-site-width;
+  
 }
 
 
@@ -204,11 +216,7 @@ textarea {
   -webkit-appearance: button;
   font: inherit;
 }
-html {
-  font: 112.5%/1.45em georgia, serif;
-  box-sizing: border-box;
-  overflow-y: scroll;
-}
+
 * {
   box-sizing: inherit;
 }

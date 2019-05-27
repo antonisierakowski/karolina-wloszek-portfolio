@@ -85,7 +85,7 @@ SEO.defaultProps = {
   lang: `en`,
   meta: [],
   keywords: [],
-  description: ``,
+  description: `Karolina Włoszek, product design portfolio.`,
 }
 
 SEO.propTypes = {
