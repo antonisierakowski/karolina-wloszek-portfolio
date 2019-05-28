@@ -1,11 +1,11 @@
 @import 'variables';
 
 @mixin mobile {
-    @media (max-width: 599px) { @content; }
+    @media (max-width: 611px) { @content; }
 }
 
 @mixin tablet {
-    @media (min-width: 600px) and (max-width: 899px) { @content; }
+    @media (min-width: 612px) and (max-width: 899px) { @content; }
 }
 
 @mixin desktop {

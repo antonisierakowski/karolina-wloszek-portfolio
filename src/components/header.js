@@ -42,65 +42,45 @@ const HeaderContainer = styled.header`
 `
 
 const Header = ({fontColor, location}) => {
-  const [ animationState, setAnimationState ] = useState(true);
-
-  useEffect(() => {
-    const timeoutId = setTimeout(() => {
-      setAnimationState(false)
-    },300)
-
-    return () => clearTimeout(timeoutId)
-  })
-
   return (
     <HeaderContainer id='header' color={fontColor}>
       <div className='center'>
         <PageLink to='/'>Karolina Włoszek</PageLink>
         <ul>
-          <li>
-            <PageLink to={location !== '/projects/' ? '/projects/' : '/'} className={location !== '/projects/' ? 'hoverable' : null}>
-              {location !== '/projects/'
-                ?
-                  'PROJEKTY'
-                :
-                  // <button className={animationState ? "hamburger hamburger--slider" : "hamburger hamburger--slider is-active"} type="button">
-                  //   <span className="hamburger-box">
-                  //     <span className="hamburger-inner" ></span>
-                  //   </span>
-                  // </button>
-                  <span className={ animationState ? 'cross' : 'cross active'} style={{color: 'white'}}>PROJEKTY</span>
-                }
-            </PageLink>
-          </li>
-          <li>
-            <PageLink to={location !== '/about-me/' ? '/about-me/' : '/'} className={location !== '/about-me/' ? 'hoverable' : null}>
-              {location !== '/about-me/' ? 'O MNIE' : 'X'}
-            </PageLink>
-          </li>
+          <HeaderNavLink currentLocation={location} targetLocation='/projects/'>PROJECTS</HeaderNavLink>
+          <HeaderNavLink currentLocation={location} targetLocation='/about-me/'>ABOUT ME</HeaderNavLink>
         </ul>
       </div>
     </HeaderContainer>
   )
 }
 
+function HeaderNavLink({ children, currentLocation, targetLocation }) {
+  const [ animationState, setAnimationState ] = useState(true);
 
+  useEffect(() => {
+    const timeoutId = setTimeout(() => {
+      setAnimationState(false)
+    },20)
 
-// {/* <HeaderContainer id='header' color={fontColor}>
-// <div className='center'>
-//   <PageLink to='/'>Karolina Włoszek</PageLink>
-//   <ul>
-//     <li>
-//       <PageLink to='/projects/' className='hoverable' activeClassName='active-link'>
-//         PROJEKTY
-//       </PageLink>
-//     </li>
-//     <li>
-//       <PageLink to='/about-me/' className='hoverable' activeClassName='active-link'>
-//         O MNIE
-//       </PageLink>
-//     </li>
-//   </ul>
-// </div>
-// </HeaderContainer> */}
+    return () => clearTimeout(timeoutId)
+  })
+
+  const backToMainLink = (
+    <span className={ animationState ? 'cross' : 'cross active'}>
+      <span className='link-title'>{children}</span>
+    </span>
+  )
+  return (
+    <li>
+      <PageLink
+        to={targetLocation !== currentLocation ? targetLocation : '/'}
+        className={targetLocation !== currentLocation ? 'hoverable' : null}
+      >
+        {currentLocation !== targetLocation ? children : backToMainLink}
+      </PageLink>
+    </li>
+  )
+}
 
 export default Header

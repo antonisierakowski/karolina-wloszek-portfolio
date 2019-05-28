@@ -27,12 +27,8 @@ export default function Template({data, nextData, location}) {
             left: 0,
             behavior: 'smooth',
         })
-        // const scrollToInfo = ()  => {
-        //     Scroll.animateScroll.scrollTo(infoRef.current.offsetTop)
-        // }
 
         let handleScroll;
-
         if (browser === 'firefox') {
             handleScroll = () => {
                 scrollToInfo()
@@ -54,11 +50,18 @@ export default function Template({data, nextData, location}) {
                 }
             }
         }
+
+        const handleTouchStart = event => {
+            event.preventDefault()
+            scrollToInfo()
+        }
         
         isOnTop && document.addEventListener(browser === 'firefox' ? 'scroll' : 'wheel', handleScroll, { passive: false })
-        
+        isOnTop && document.addEventListener('touchmove', handleTouchStart, { passive: false })
+
         return () => {
             document.removeEventListener(browser === 'firefox' ? 'scroll' : 'wheel', handleScroll)
+            document.removeEventListener('touchmove', handleTouchStart)
         }
     }, [isOnTop])
     
@@ -86,7 +89,7 @@ export default function Template({data, nextData, location}) {
                 </section>
 
                 
-                <div className='center' ref={infoRef}>
+                <section className='center' ref={infoRef}>
                     <section className='project-info'>
                         <div className='title-section'>
                             <h2 className='title'>{data.title}</h2>
@@ -106,7 +109,7 @@ export default function Template({data, nextData, location}) {
                             </div>
                         </div>
                     </section>        
-                </div>
+                </section>
                 
 
                 <section className='project-gallery'>
@@ -182,7 +185,3 @@ export default function Template({data, nextData, location}) {
         </Layout>
     )
 }
-
-// <img src={nextData.contentData.coverImg}/>
-// style={{background: `url(${nextData.contentData.coverImg})`}}
-

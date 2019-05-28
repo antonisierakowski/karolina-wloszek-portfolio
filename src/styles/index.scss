@@ -20,6 +20,8 @@
                 width: 50%;
                 @include mobile {
                     width: 100%;
+                    text-align: right;
+                    font-size: 2.2rem;
                 }
                 color: white;
                 font-size: 2.5rem;

@@ -1,6 +1,5 @@
 @import 'variables';
 @import 'mixins';
-@import "~hamburgers/_sass/hamburgers/hamburgers";
 
 #header {
     font-family: $secondary-font;
@@ -37,10 +36,11 @@
         
 
         .cross {
-            
+            height: 100%;
+            display: inline-block;
             &::after,
             &::before {
-                transition: 1s;
+                transition: ease-out 0.8s;
                 content: '';
                 display: block;
                 position: absolute;
@@ -52,19 +52,30 @@
                 left: 0;
             }
 
+            
             &.active {
-                &::after {
+                &::after,
+                &::before {
+                    top: 45%;
                     left: 50%;
                     width: 20%;
+                    height: 2px;
+                }
+
+                &::after {
                     transform: rotate(45deg);
                 }
 
                 &::before {
-                    left: 50%;
-                    width: 20%;
                     transform: rotate(-45deg);
                 }
 
+                .link-title {
+                    transition: 0.8s;
+                    opacity: 0;
+                    display: inline-block;
+                    transform: translateY(0.3rem) scale(0.8, 1);
+                }
             }
         }
 

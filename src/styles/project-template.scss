@@ -61,19 +61,62 @@
         }
     }
 
-    .center {
+    section.center {
         display: flex;
-        align-items: center;
-        height: 100vh;
+        @include mobile {
+            align-items: center;
+            min-height: 100vh;
+        }
+        @include tablet {
+            height: 100vh;
+        }
+        @include desktop {
+            height: 100vh;
+            align-items: center;
+        }
+        @include large-desktop {
+            height: 100vh;
+            align-items: center;
+        }
         .project-info {
-            
+            @include mobile {
+                flex-direction: column;
+                align-items: center;
+                padding-top: 5rem;
+                padding-bottom: 2rem;
+            }
+            @include tablet {
+                flex-direction: column;
+                align-items: center;
+                padding-top: 6rem;
+                // padding-bottom: 1rem;
+            }
             display: flex;
             height: 70%;
             .title-section {
-                width: 50%;
+                @include mobile {
+                    width: 100%;
+                    margin-bottom: 2rem;
+                }
+                @include tablet {
+                    width: 100%;
+                    margin-bottom: 2rem;
+                }
+                @include desktop {
+                    width: 50%;
+                }
+                @include large-desktop {
+                    width: 50%;
+                }
                 font-family: $primary-font;
                 .title {
                     font-size: 5rem;
+                    @include mobile {
+                        font-size: 3.5rem;
+                    }
+                    @include tablet {
+                        font-size: 4rem;
+                    }
                     font-weight: 700;
                     margin: 0;
                     
@@ -86,6 +129,12 @@
             }
             .description-section {
                 width: 50%;
+                @include mobile {
+                    width: 100%;
+                }
+                @include tablet {
+                    width: 100%;
+                }
                 display: flex;
                 flex-direction: column;
                 
@@ -98,6 +147,12 @@
                 .paragraphs {
                     font-family: $secondary-font;
                     font-size: 0.7rem;
+                    @include mobile {
+                        font-size: 0.9rem;
+                    }
+                    @include tablet {
+                        font-size: 0.9rem;
+                    }
 
                     div {
                         margin-bottom: 1rem;
@@ -185,14 +240,20 @@
             flex-direction: column;
             justify-content: space-between;
             align-items: center;
-
+            
             
             .next-project {
                 height: 80%;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                
+                @include mobile {
+                    flex-direction: column;
+                    justify-content: center;
+                }
+                @include tablet {
+                    flex-direction: column;
+                }
                 transition: transform 1s;
                 &.active {
                     
@@ -206,18 +267,38 @@
                 
                 .wrapper {
                     position: relative;
-                
-                    h1.title {      
+                    @include mobile {
+                        margin-bottom: 3.5rem;
+                        
+                    }
+                    @include tablet {
+                        margin-bottom: 3.5rem;
+                    }
+                    h1.title {    
                         font-size: 6.3rem;   
-                        cursor: pointer;   
+                        @include mobile {
+                            
+                            font-size: 5rem;   
+                            text-align: center;
+                        }
+                        @include tablet {
+                            font-size: 4.4rem;   
+                        }
+                        cursor: pointer; 
+
                     }
         
                     span.subtitle {
                         font-family: $secondary-font;
                         font-size: 0.7rem;
+                        @include mobile {
+                            font-size: 0.9rem; 
+                        }
+                        @include tablet {
+                            font-size: 1rem;   
+                        }
                         font-weight: 200;
                         font-style: italic;
-                        
                         position: absolute;
                         bottom: 0;
                         left: 0;
@@ -226,9 +307,24 @@
                 }
                 span.see-next {
                     font-size: 2rem;
-                    position: absolute;
-                    bottom: 40%;
-                    right: 20%;
+                    @include mobile {
+                        font-size: 1.8rem;
+                    }
+                    @include tablet {
+                        font-size: 1.8rem;
+                        bottom: 45%;
+                        right: 25%;
+                    }
+                    @include desktop {
+                        position: absolute;
+                        bottom: 40%;
+                        right: 20%;
+                    }
+                    @include large-desktop {
+                        position: absolute;
+                        bottom: 40%;
+                        right: 20%;
+                    }
                     cursor: pointer;
                 }
     
