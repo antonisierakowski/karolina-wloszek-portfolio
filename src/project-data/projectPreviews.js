@@ -7,7 +7,6 @@ import pokojZabaw from '../images/project-previews/6.pokój_zabaw.jpg'
 import costam from '../images/project-previews/7.cośtam_ilustracje.jpg'
 import ilustracje from '../images/project-previews/8.ilustracje.jpg'
 import ulicznicy from '../images/project-previews/9.ulicznicy.jpg'
-import albumCover from '../images/project-previews/10.album_cover.jpg'
 import voicemail from '../images/project-previews/11.voicemail.jpg'
 
 const projectPreviews = {
@@ -20,7 +19,6 @@ const projectPreviews = {
     costam,
     ilustracje,
     ulicznicy,
-    albumCover,
     voicemail
 }
 

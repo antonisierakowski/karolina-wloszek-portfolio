@@ -216,7 +216,7 @@ projectsData[3] = {
 
 // moduu
 projectsData[4] = {
-    title: 'Moduu',
+    title: 'moduu',
     route: 'moduu',
     previewData: {
         caption: 'Product design',
@@ -242,10 +242,10 @@ projectsData[4] = {
         ],
         gallery: [
             [
-                galleryData.moduu[1], galleryData.moduu[2], 
+                galleryData.moduu[1],
             ],
             [
-                galleryData.moduu[3]
+                galleryData.moduu[2]
             ],
         ]
     },
@@ -441,57 +441,8 @@ projectsData[8] = {
     }
 }
 
-// album cover
-projectsData[9] = {
-    title: <Fragment>Album&nbsp;cover</Fragment>,
-    route: 'album-cover',
-    previewData: {
-        caption: 'Lorem ipsum dolor sit amet, consectetur',
-        img: projectPreviews.albumCover,
-    },
-    contentData: {
-        coverImg: galleryData.soap[0],
-        year: '2019',
-        subtitle: 'Projekt opakownań oraz logo dla manufaktury ręcznie wytwarzającej mydła',
-        paragraphs: [
-            {
-                title: 'OPIS',
-                content: <Fragment><p><strong>mu.la</strong> czyli muzyczne laboratorium pozwalające na zaangażowanie, oprócz słuchu, najważniejszego w przypadku muzyki zmysłu, także zmysłów wzroku i dotyku. Czy zastanawialiście się kiedyś jak wygląda dźwięk, jaki jest w dotyku? Albo jak jest zbudowany instrument? Z <strong>mu.lą</strong> dzieci mogą zaobserwować powstawanie fal dźwiękowych, zbadać właściwości różnych materiałów wydających dźwięki oraz tworzyć własne wersje instrumentu.</p><p>Podczas zabawy kategoria błędnego doświadczenia nie istnieje – każde doświadczenie, nawet to zakończone niepowodzeniem jest wartościowe. Umożliwia to rozwój myślenia wyjętego ze schematów oraz angażuje wyobraźnię i całą pomysłowość dziecka.</p></Fragment>,
-            },
-            {
-                title: 'MOJA ROLA',
-                content: <p>Projektowanie Graficzne, Ilustracje</p>
-            },
-            {
-                title: 'WIĘCEJ INFO',
-                content: <p>Personal project</p>
-            },
-        ],
-        gallery: [
-            [
-                galleryData.soap[1], galleryData.soap[2], galleryData.soap[3], galleryData.soap[4], 
-            ],
-            [
-                galleryData.soap[5]
-            ],
-            [
-                galleryData.soap[6]
-            ],
-            [
-                galleryData.soap[7], galleryData.soap[8], galleryData.soap[9], galleryData.soap[10], 
-            ],
-            [
-                galleryData.soap[11]
-            ]
-        ]
-    },
-    thumbnailData: {
-        previewImg: 'tu bd url zdj do preview',
-    }
-}
-
 // voicemail
-projectsData[10] = {
+projectsData[9] = {
     title: 'Voicemail',
     route: 'voicemail',
     previewData: {

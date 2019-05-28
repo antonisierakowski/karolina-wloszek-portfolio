@@ -2,7 +2,6 @@ import React, { useState } from "react"
 import '../styles/projects.scss'
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import '../styles/global-styles.scss'
 import projectsData from '../project-data/projectsData'
 import Slider from "react-slick";
 import PageLink from '../components/PageLink'
@@ -74,6 +73,7 @@ const Projects = ({location}) => {
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
+          dots: true,
           swipeToSlide: true,
         }
       },
@@ -89,7 +89,7 @@ const Projects = ({location}) => {
               {projects}
             </Slider>
           </div>
-          <div className='dots'>
+          <div className='dots nonslick'>
             {dots}
           </div>
       </div>

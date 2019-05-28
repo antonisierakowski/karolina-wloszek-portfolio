@@ -1,5 +1,6 @@
 @import 'variables';
 @import 'mixins';
+@import "~hamburgers/_sass/hamburgers/hamburgers";
 
 #header {
     font-family: $secondary-font;
@@ -34,8 +35,37 @@
             margin-bottom: 0;
         }
         
-        .active-link {
-            color: red;
+
+        .cross {
+            
+            &::after,
+            &::before {
+                transition: 1s;
+                content: '';
+                display: block;
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                background-color: black;
+                top: 50%;
+                transform-origin: 50% 50%;
+                left: 0;
+            }
+
+            &.active {
+                &::after {
+                    left: 50%;
+                    width: 20%;
+                    transform: rotate(45deg);
+                }
+
+                &::before {
+                    left: 50%;
+                    width: 20%;
+                    transform: rotate(-45deg);
+                }
+
+            }
         }
 
     }

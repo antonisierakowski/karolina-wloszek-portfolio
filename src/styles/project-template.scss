@@ -15,6 +15,7 @@
         background-size: cover;
         background-position: center;
         cursor: pointer;
+
         .scroll-indicator {
             width: 0;
             height: 4rem;
@@ -87,7 +88,7 @@
                 width: 50%;
                 display: flex;
                 flex-direction: column;
-                // justify-content: space-between;
+                
 
                 .subtitle {
                     font-family: $primary-font;
@@ -172,9 +173,9 @@
             &.active {
                 
                 mix-blend-mode: lighten;
-                h1, span {
+                .title {
                     
-                    transform: scale(1.4);
+                    transform: scale(1.1);
                 }
                 
                 
@@ -195,10 +196,10 @@
                 transition: transform 1s;
                 &.active {
                     
-                    h1, span {
+                    .title {
                         transition: transform 1s;
                         font-size: 5rem;
-                        transform: scale(2, 2);
+                        transform: scale(1.5, 1.5);
                     }
                     
                 }

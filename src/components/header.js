@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import '../styles/header.scss'
 import styled from 'styled-components'
 import PageLink from './PageLink'
@@ -42,6 +42,15 @@ const HeaderContainer = styled.header`
 `
 
 const Header = ({fontColor, location}) => {
+  const [ animationState, setAnimationState ] = useState(true);
+
+  useEffect(() => {
+    const timeoutId = setTimeout(() => {
+      setAnimationState(false)
+    },300)
+
+    return () => clearTimeout(timeoutId)
+  })
 
   return (
     <HeaderContainer id='header' color={fontColor}>
@@ -50,7 +59,17 @@ const Header = ({fontColor, location}) => {
         <ul>
           <li>
             <PageLink to={location !== '/projects/' ? '/projects/' : '/'} className={location !== '/projects/' ? 'hoverable' : null}>
-              {location !== '/projects/' ? 'PROJEKTY' : 'X'}
+              {location !== '/projects/'
+                ?
+                  'PROJEKTY'
+                :
+                  // <button className={animationState ? "hamburger hamburger--slider" : "hamburger hamburger--slider is-active"} type="button">
+                  //   <span className="hamburger-box">
+                  //     <span className="hamburger-inner" ></span>
+                  //   </span>
+                  // </button>
+                  <span className={ animationState ? 'cross' : 'cross active'} style={{color: 'white'}}>PROJEKTY</span>
+                }
             </PageLink>
           </li>
           <li>

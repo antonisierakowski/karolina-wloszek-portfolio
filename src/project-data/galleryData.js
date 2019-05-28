@@ -37,8 +37,7 @@ import skladak4 from '../images/gallery/skladak/4.jpg'
 import skladak5 from '../images/gallery/skladak/5.jpg'
 
 import moduuCover from '../images/gallery/moduu/cover.jpg'
-import moduu1_1 from '../images/gallery/moduu/1-1.jpg'
-import moduu1_2 from '../images/gallery/moduu/1-2.jpg'
+import moduu1 from '../images/gallery/moduu/1.jpg'
 import moduu2 from '../images/gallery/moduu/2.jpg'
 
 import ulicznicyCover from '../images/gallery/ulicznicy/cover.jpg'
@@ -68,7 +67,7 @@ const galleryData = {
         skladakCover, skladak1_1, skladak1_2, skladak2, skladak3_1, skladak3_2, skladak4, skladak5
     ],
     moduu: [
-        moduuCover, moduu1_1, moduu1_2, moduu2,
+        moduuCover, moduu1, moduu2,
     ],
     ulicznicy: [
         ulicznicyCover, ulicznicy1

@@ -1,5 +1,4 @@
 import React, { Fragment, useEffect, useRef, useState } from 'react'
-import '../styles/global-styles.scss'
 import '../styles/project-template.scss'
 import Layout from "./layout"
 import SEO from "./seo"
@@ -9,6 +8,7 @@ import useOnTopPosition from '../components/useOnTopPosition'
 import { detect } from 'detect-browser'
 import PageLink from '../components/PageLink'
 import { navigate } from 'gatsby'
+import Slide from 'react-reveal/Slide';
 
 
 export default function Template({data, nextData, location}) {
@@ -80,9 +80,9 @@ export default function Template({data, nextData, location}) {
             <SEO title={ typeof data.title === 'string' ? data.title : data.title.props.children } keywords={[`karolina włoszek`, `product design`, `design`, `portfolio`]} />
             <div id='project-page' className='background'>
                 <section className='project-cover' style={{backgroundImage: `url(${data.contentData.coverImg})`}} onClick={handleCoverClick} >
-                    <div className='scroll-indicator'>
+                    <Slide bottom><div className='scroll-indicator'>
                         <div><span>Scroll</span></div>
-                    </div>
+                    </div></Slide>
                 </section>
 
                 

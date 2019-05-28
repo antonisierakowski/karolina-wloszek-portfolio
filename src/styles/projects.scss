@@ -95,9 +95,34 @@
             left: -200%;
         }
       
+        .slick-dots {
+            // width: 10rem;
+            // height: 15px;
+            // display: flex;
+            // justify-content: space-between;
+
+            li {
+                width: 0.6rem;
+                height: 0.6rem;
+                border: 0.09rem solid black;
+                border-radius: 50%;
+                transition: 0.4s;
+
+                &.slick-active {
+                    background: black;
+                }
+
+                button::before {
+                    content: ''
+                }
+            }
+
+
+        }
 
 
     }
+
 
     .dots {
         width: 10rem;
@@ -116,6 +141,16 @@
         .active {
             background: black;
         }
+
+        &.nonslick {
+            @include mobile {
+                display: none;
+            }
+            @include tablet {
+                display: none;
+            }
+        }
     }
+
 
 }
