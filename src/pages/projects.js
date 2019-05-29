@@ -7,7 +7,7 @@ import Slider from "react-slick";
 import PageLink from '../components/PageLink'
 import ProjectCaption from '../components/ProjectCaption'
 import useCursorScreenHalf from '../components/useCursorScreenHalf'
-
+import MobileProjectCaption from '../components/MobileProjectCaption'
 
 const Projects = ({location}) => {
   const [ isAnyHovered, setIsAnyHovered ] = useState(false)
@@ -40,6 +40,7 @@ const Projects = ({location}) => {
           />
         </PageLink>
         {isAnyHovered && hoveredIndex === i ? <ProjectCaption title={project.title} description={project.previewData.caption} cursorScreenHalf={cursorScreenHalf} /> : null}
+        <MobileProjectCaption title={project.title} description={project.previewData.caption} cursorScreenHalf={cursorScreenHalf} />
       </div>
     )
   })

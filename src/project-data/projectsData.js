@@ -73,11 +73,11 @@ projectsData[1] = {
         paragraphs: [
             {
                 title: 'OPIS',
-                content: <Fragment><p><strong>mu.la</strong> czyli muzyczne laboratorium pozwalające na zaangażowanie, oprócz słuchu, najważniejszego w przypadku muzyki zmysłu, także zmysłów wzroku i dotyku. Czy zastanawialiście się kiedyś jak wygląda dźwięk, jaki jest w dotyku? Albo jak jest zbudowany instrument? Z <strong>mu.lą</strong> dzieci mogą zaobserwować powstawanie fal dźwiękowych, zbadać właściwości różnych materiałów wydających dźwięki oraz tworzyć własne wersje instrumentu.</p><p>Podczas zabawy kategoria błędnego doświadczenia nie istnieje – każde doświadczenie, nawet to zakończone niepowodzeniem jest wartościowe. Umożliwia to rozwój myślenia wyjętego ze schematów oraz angażuje wyobraźnię i całą pomysłowość dziecka.</p></Fragment>,
+                content: <p>Projekt logo oraz identyfikacji wizualnej dla fikcyjnej marki ręcznie produkującej mydła - The Soap Company.</p>
             },
             {
                 title: 'MOJA ROLA',
-                content: <p>Projektowanie Graficzne, Ilustracje</p>
+                content: <p>Projektowanie Graficzne, Ilustracje, Projekt Logo</p>
             },
             {
                 title: 'WIĘCEJ INFO',

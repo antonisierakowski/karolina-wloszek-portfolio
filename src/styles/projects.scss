@@ -25,6 +25,14 @@
             position: relative;
             img {
                 width: 14rem;
+                @include mobile {
+                    width: 18rem;
+                    margin-bottom: 2rem;
+                }
+                @include tablet {
+                    width: 15rem;
+                    margin-bottom: 3rem;
+                }
                 display: block;
                 margin: auto;
                 transition: opacity 0.2s;
@@ -39,6 +47,13 @@
                 top: 3rem;
                 
                 pointer-events: none;
+
+                @include mobile {
+                    display: none;
+                }
+                @include tablet {
+                    display: none;
+                }
                 
                 .project-title {
                     
@@ -61,6 +76,52 @@
                 }
             }
 
+            .mobile-project-caption {
+                @include desktop {
+                    display: none;
+                }
+                @include large-desktop {
+                    display: none;
+                }
+                z-index: 1000;
+                position: absolute;
+                top: 10%;
+                width: 100%;
+                
+                
+                pointer-events: none;
+
+
+                .project-title {
+
+                    text-align: center;
+                    display: block;
+                    
+                    line-height: 80%;
+                    font-size: 4rem;
+                    @include tablet {
+                        font-size: 2.9rem;
+                    }
+                    margin: 0 auto;
+                    font-weight: 700;
+                    
+
+                }
+                .project-description {
+                    display: block;
+                    text-align: center;
+                    font-size: 0.9rem;
+                    @include tablet {
+                        font-size: 0.8rem;
+                        width: 90%;
+                        margin: 0 auto;
+                    }
+                    font-family: $secondary-font;
+                    font-style: italic;
+                    line-height: 0.9rem;
+            
+                }
+            }
         }
         
 
@@ -102,8 +163,8 @@
             // justify-content: space-between;
 
             li {
-                width: 0.6rem;
-                height: 0.6rem;
+                width: 0.8rem;
+                height: 0.8rem;
                 border: 0.09rem solid black;
                 border-radius: 50%;
                 transition: 0.4s;
