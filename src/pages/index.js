@@ -5,8 +5,7 @@ import SEO from "../components/seo"
 import IntroText from '../components/IntroText'
 import { Fade } from 'react-reveal'
 
-const IndexPage = (props, {location}) => {
-  console.log(props)
+const IndexPage = ({location}) => {
   return (
     <Layout fontColor='white' location={location}>
       <SEO title="Portfolio" keywords={[`karolina włoszek`, `product design`, `design`, `portfolio`]} />

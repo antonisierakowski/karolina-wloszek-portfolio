@@ -17,6 +17,18 @@
         justify-content: space-between;
         align-items: center;
     }
+
+    a {
+
+        .logo {
+            width: 2.2rem;;
+            margin: auto 0;
+            // position: relative;
+            // top: 50%;
+            // transform: translateY(-50%);
+        }
+    }
+
   
     ul {
         list-style: none;

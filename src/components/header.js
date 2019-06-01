@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react"
 import '../styles/header.scss'
 import styled from 'styled-components'
 import PageLink from './PageLink'
+import logo from '../images/logo_grubsze.png'
+import { Fade } from 'react-reveal'
 
 const HeaderContainer = styled.header`
   color: ${props => props.color};
@@ -45,7 +47,11 @@ const Header = ({fontColor, location}) => {
   return (
     <HeaderContainer id='header' color={fontColor}>
       <div className='center'>
-        <PageLink to='/'>Karolina Włoszek</PageLink>
+        <PageLink to='/'>
+          {location.pathname === '/' ? <Fade bottom cascade>Karolina Włoszek</Fade> : <img alt='logo' src={logo} className='logo'/>}
+       
+          
+        </PageLink>
         <ul>
           <HeaderNavLink currentLocation={location} targetLocation='/projects/'>PROJECTS</HeaderNavLink>
           <HeaderNavLink currentLocation={location} targetLocation='/about-me/'>ABOUT ME</HeaderNavLink>
