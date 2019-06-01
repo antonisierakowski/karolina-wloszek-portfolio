@@ -50,10 +50,11 @@
             }
 
             img {
-                margin: auto 0;
+                margin-left: 0;
                 max-height: 100%;
+                max-width: 140%;
                 @include mobile {
-  
+                   
                 }
                 @include tablet {
            
