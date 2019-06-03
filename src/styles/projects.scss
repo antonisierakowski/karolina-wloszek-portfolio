@@ -31,7 +31,6 @@
                 
                 .slick-track {
                     height: 100%;
-                    
                     div {
                         height: 100%;
                         
@@ -41,25 +40,17 @@
         }
         .slide-container {
             position: relative;
-
             a {
                 display: block;
                 height: 100%;
                 width: 100%;
-                // display: flex;
-                // align-items: center;
-
-                // max-width: 500px;
-                // min-width: 100px;
                 
                 img {
                     object-fit: cover;
                     object-position: center center;
-                    
+                    // max-width: 19.5rem;
+                    max-width: 97%;
                     height: 100%;
-                    // width: 100%;
-                    // max-width: 140%;
-                    // display: block;
                     margin: auto;
                     transition: filter 0.2s;
                     @include mobile {
@@ -67,6 +58,9 @@
                     }
                     @include tablet {
                
+                    }
+                    @include desktop {
+                        object-fit: cover;
                     }
                 }
                 .out-of-focus {
@@ -180,7 +174,7 @@
             transform: scale(0.15);
             @include mobile {
                 transform: scale(0.25);
-                top: -3rem;
+                top: -1rem;
             }
             @include tablet {
                 transform: scale(0.20);

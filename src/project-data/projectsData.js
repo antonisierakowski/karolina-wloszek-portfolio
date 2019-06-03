@@ -315,7 +315,7 @@ projectsData[6] = {
         img: projectPreviews.costam,
     },
     contentData: {
-        coverImg: galleryData.soap[0],
+        coverImg: galleryData.costam[0],
         year: '2019',
         subtitle: 'Projekt opakownań oraz logo dla manufaktury ręcznie wytwarzającej mydła',
         paragraphs: [
@@ -334,20 +334,8 @@ projectsData[6] = {
         ],
         gallery: [
             [
-                galleryData.soap[1], galleryData.soap[2], galleryData.soap[3], galleryData.soap[4], 
+                galleryData.costam[1]
             ],
-            [
-                galleryData.soap[5]
-            ],
-            [
-                galleryData.soap[6]
-            ],
-            [
-                galleryData.soap[7], galleryData.soap[8], galleryData.soap[9], galleryData.soap[10], 
-            ],
-            [
-                galleryData.soap[11]
-            ]
         ]
     },
     thumbnailData: {
@@ -364,7 +352,7 @@ projectsData[7] = {
         img: projectPreviews.ilustracje,
     },
     contentData: {
-        coverImg: galleryData.soap[0],
+        coverImg: galleryData.ilustracje[0],
         year: '2019',
         subtitle: 'Projekt opakownań oraz logo dla manufaktury ręcznie wytwarzającej mydła',
         paragraphs: [
@@ -383,20 +371,11 @@ projectsData[7] = {
         ],
         gallery: [
             [
-                galleryData.soap[1], galleryData.soap[2], galleryData.soap[3], galleryData.soap[4], 
+                galleryData.ilustracje[1], galleryData.ilustracje[2]
             ],
             [
-                galleryData.soap[5]
+                galleryData.ilustracje[3]
             ],
-            [
-                galleryData.soap[6]
-            ],
-            [
-                galleryData.soap[7], galleryData.soap[8], galleryData.soap[9], galleryData.soap[10], 
-            ],
-            [
-                galleryData.soap[11]
-            ]
         ]
     },
     thumbnailData: {
@@ -450,7 +429,7 @@ projectsData[9] = {
         img: projectPreviews.voicemail,
     },
     contentData: {
-        coverImg: galleryData.soap[0],
+        coverImg: galleryData.voicemail[0],
         year: '2019',
         subtitle: 'Projekt opakownań oraz logo dla manufaktury ręcznie wytwarzającej mydła',
         paragraphs: [
@@ -469,20 +448,11 @@ projectsData[9] = {
         ],
         gallery: [
             [
-                galleryData.soap[1], galleryData.soap[2], galleryData.soap[3], galleryData.soap[4], 
+                galleryData.voicemail[1]
             ],
             [
-                galleryData.soap[5]
+                galleryData.voicemail[2]
             ],
-            [
-                galleryData.soap[6]
-            ],
-            [
-                galleryData.soap[7], galleryData.soap[8], galleryData.soap[9], galleryData.soap[10], 
-            ],
-            [
-                galleryData.soap[11]
-            ]
         ]
     },
     thumbnailData: {

@@ -46,7 +46,15 @@ exports.onCreateWebpackConfig = ({
             optipng: {
                 optimizationLevel: 9
             },
-            plugins: [imageminMozjpeg({quality: 80})]
+            gifsicle: {
+                interlaced: true,
+                optimizationLevel: 8
+            },
+            plugins: [
+                imageminMozjpeg({
+                    quality: 85
+                }), 
+            ]
         }),
       ],
     })

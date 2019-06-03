@@ -52,6 +52,17 @@ import pokojZabaw5_1 from '../images/gallery/pokoj-zabaw/5-1.jpg'
 import pokojZabaw5_2 from '../images/gallery/pokoj-zabaw/5-2.jpg'
 import pokojZabaw6 from '../images/gallery/pokoj-zabaw/6.jpg'
 
+import ilustracjeCover from '../images/gallery/ilustracje/cover.jpg'
+import ilustracje1_1 from '../images/gallery/ilustracje/1-1.jpg'
+import ilustracje1_2 from '../images/gallery/ilustracje/1-2.jpg'
+import ilustracje2 from '../images/gallery/ilustracje/2.jpg'
+
+import voicemailCover from '../images/gallery/voicemail/cover.jpg'
+import voicemail1 from '../images/gallery/voicemail/1.jpg'
+import voicemail2 from '../images/gallery/voicemail/2.gif'
+
+import costamCover from '../images/gallery/costam/cover.jpg'
+import costam1 from '../images/gallery/costam/1.jpg'
 
 const galleryData = {
     mula: [
@@ -74,6 +85,15 @@ const galleryData = {
     ],
     pokojZabaw: [
         pokojZabawCover, pokojZabaw1, pokojZabaw2, pokojZabaw3, pokojZabaw4, pokojZabaw5_1, pokojZabaw5_2, pokojZabaw6
+    ],
+    ilustracje: [
+        ilustracjeCover, ilustracje1_1, ilustracje1_2, ilustracje2
+    ],
+    voicemail: [
+        voicemailCover, voicemail1, voicemail2,
+    ],
+    costam: [
+        costamCover, costam1,
     ]
 }
 
