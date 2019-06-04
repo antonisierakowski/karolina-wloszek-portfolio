@@ -29,19 +29,19 @@ const Projects = ({location, lng}) => {
     return (
       <div
         className='slide-container'
-        key={project.title}
+        key={project.title.en}
         onMouseEnter={() => handleMouseEnter(i)}
         onMouseLeave={handleMouseLeave}
       >
         <PageLink to={'/projects/' + project.route} key={'link' + project.title}>
           <img
-            alt={'img' + project.title}
+            alt={'cover of ' + project.title.en}
             src={project.previewData.img}
             className={isAnyHovered && hoveredIndex !== i ? 'out-of-focus' : null}
           />
         </PageLink>
-        {isAnyHovered && hoveredIndex === i ? <ProjectCaption title={project.title} description={project.previewData.caption} cursorScreenHalf={cursorScreenHalf} /> : null}
-        <MobileProjectCaption title={project.title} description={project.previewData.caption} cursorScreenHalf={cursorScreenHalf} />
+        {isAnyHovered && hoveredIndex === i ? <ProjectCaption title={lng === 'en' ? project.title.en : project.title.pl} description={lng === 'en' ? project.previewData.caption.en : project.previewData.caption.pl} cursorScreenHalf={cursorScreenHalf} /> : null}
+        <MobileProjectCaption title={lng === 'en' ? project.title.en : project.title.pl} description={lng === 'en' ? project.previewData.caption.en : project.previewData.caption.pl} cursorScreenHalf={cursorScreenHalf} />
       </div>
     )
   })
@@ -99,4 +99,4 @@ const Projects = ({location, lng}) => {
   )
 }
 
-export default Projects
+export default translate()(Projects)

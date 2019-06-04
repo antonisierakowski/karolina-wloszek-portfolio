@@ -13,7 +13,7 @@ import Slide from 'react-reveal/Slide';
 import { translate } from "react-i18next"
 
 
-const Template = ({data, nextData, location, lng}) => {
+const Template = ({data, nextData, location, lng, t}) => {
     const isOnTop = useOnTopPosition()
     const infoRef = useRef(null)
     const browser = detect().name
@@ -79,32 +79,52 @@ const Template = ({data, nextData, location, lng}) => {
         
     }
 
+    const seo = lng === 'en' ? (
+        <SEO title={ typeof data.title.en === 'string' ? data.title.en : data.title.en.props.children } keywords={[`karolina włoszek`, `product design`, `design`, `portfolio`]} />
+    ) : (
+        <SEO title={ typeof data.title.pl === 'string' ? data.title.pl : data.title.pl.props.children } keywords={[`karolina włoszek`, `product design`, `design`, `portfolio`]} />
+    )
+    
+    let paragraphs = []
+    if (lng === 'en') {
+        paragraphs = data.contentData.paragraphs.en.map( paragraph => {
+            return (
+                <Fragment key={paragraph.title}>
+                    <div><strong>{paragraph.title}</strong></div>
+                    <div>{paragraph.content}</div>
+                </Fragment>
+            )
+        })
+    } else if (lng === 'pl') {
+        paragraphs = data.contentData.paragraphs.pl.map( paragraph => {
+            return (
+                <Fragment key={paragraph.title}>
+                    <div><strong>{paragraph.title}</strong></div>
+                    <div>{paragraph.content}</div>
+                </Fragment>
+            )
+        })
+    }
+    console.log(data)
     return (
         <Layout fontColor='inherit' location={location}>
-            <SEO title={ typeof data.title === 'string' ? data.title : data.title.props.children } keywords={[`karolina włoszek`, `product design`, `design`, `portfolio`]} />
+            {seo}
             <div id='project-page' className='background'>
                 <section className='project-cover' style={{backgroundImage: `url(${data.contentData.coverImg})`}} onClick={handleCoverClick} >
                     <Slide bottom><div className='scroll-indicator'>
-                        <div><span>Scroll</span></div>
+                        <div><span>{t('scroll')}</span></div>
                     </div></Slide>
                 </section>
                 <section className='center' ref={infoRef}>
                     <section className='project-info'>
                         <div className='title-section'>
-                            <h2 className='title'>{data.title}</h2>
+                            <h2 className='title'>{lng === 'en' ? data.title.en : data.title.pl}</h2>
                             <span className='year'>–{data.contentData.year}</span>
                         </div>
                         <div className='description-section'>
-                            <h4 className='subtitle'>{data.contentData.subtitle}</h4>
+                            <h4 className='subtitle'>{lng === 'en' ? data.contentData.subtitle.en : data.contentData.subtitle.pl}</h4>
                             <div className='paragraphs'>
-                                {data.contentData.paragraphs.map( paragraph => {
-                                    return (
-                                        <Fragment key={paragraph.title}>
-                                            <div><strong>{paragraph.title}</strong></div>
-                                            <div>{paragraph.content}</div>
-                                        </Fragment>
-                                    )
-                                })}
+                                { paragraphs }
                             </div>
                         </div>
                     </section>        
@@ -155,19 +175,19 @@ const Template = ({data, nextData, location, lng}) => {
                             <div className='wrapper'>
                                 <h1 className='title' onClick={handleNextProjectClick} onMouseEnter={() => setNextPrjHov(true)} onMouseLeave={() => setNextPrjHov(false)}>
                                     <PageLink to={'/projects/' + nextData.route}>
-                                        {nextData.title}
+                                        {lng === 'en' ? nextData.title.en : nextData.title.pl}
                                     </PageLink>
                                 </h1>
                                 <span className='subtitle' onClick={handleNextProjectClick} onMouseEnter={() => setNextPrjHov(true)} onMouseLeave={() => setNextPrjHov(false)}>
                                     <PageLink to={'/projects/' + nextData.route}>
-                                        – {nextData.previewData.caption}
+                                        – {lng === 'en' ? nextData.previewData.caption.en : nextData.previewData.caption.pl}
                                     </PageLink>
                                 </span>
 
                             </div>    
                             <span className='see-next' onClick={handleNextProjectClick} onMouseEnter={() => setNextPrjHov(true)} onMouseLeave={() => setNextPrjHov(false)}>
                                 <PageLink to={'/projects/' + nextData.route}>
-                                    See the next project ▶︎
+                                    {t('see next')} ▶︎
                                 </PageLink>
                             </span>
                         </div>
@@ -185,4 +205,4 @@ const Template = ({data, nextData, location, lng}) => {
     )
 }
 
-export default translate()(Template)
+export default translate('Project')(Template)
