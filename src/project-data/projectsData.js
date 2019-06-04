@@ -4,7 +4,6 @@ import galleryData from './galleryData'
 
 const projectsData = [];
 
-// mu.la
 projectsData[0] = {
     title: 'mu.la',
     route: 'mu-la',

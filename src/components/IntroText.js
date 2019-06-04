@@ -1,13 +1,12 @@
 import React, { Fragment, useState } from 'react'
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import Scramble from 'react-scramble'
-import { Fade } from 'react-reveal'
 
-export default function IntroText({ children }) {
+export default function IntroText({ children, city }) {
   const scrambledCity = (
     <Scramble 
       autoStart
-      text="Wrocław"
+      text={city}
       speed='slow'
       steps={[
         {

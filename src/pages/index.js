@@ -4,17 +4,20 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import IntroText from '../components/IntroText'
 import { Fade } from 'react-reveal'
+import background from '../images/main-bg.jpg'
 
-const IndexPage = ({location}) => {
+import { translate } from "react-i18next"
+
+const IndexPage = ({location, t}) => {
   return (
     <Layout fontColor='white' location={location}>
       <SEO title="Portfolio" keywords={[`karolina włoszek`, `product design`, `design`, `portfolio`]} />
-        <div id='index-page' className='background'>
+        <div id='index-page' className='background' style={{background: `url(${background})`}}>
           <div className='center'>
             <div className='introduction-wrapper'>
               <Fade duration={1500}>
-                <IntroText>
-                  Hi, I'm Karolina, a freelance designer based in<span></span>.<br/>Ice cream gummies carrot cake chocolate bar tootsie roll. Liquorice macaroon soufflé gingerbread. <span>Tu se obejrzyj.</span>
+                <IntroText city={t('city')}>
+                  {t('intro-part1')}<span></span>.<br/>{t('intro-part2')}<span>{t('intro-link')}</span>
                 </IntroText>
               </Fade>
             </div>
@@ -24,4 +27,4 @@ const IndexPage = ({location}) => {
   )
 }
 
-export default IndexPage
+export default translate('Index')(IndexPage)

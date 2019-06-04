@@ -8,8 +8,9 @@ import PageLink from '../components/PageLink'
 import ProjectCaption from '../components/ProjectCaption'
 import useCursorScreenHalf from '../components/useCursorScreenHalf'
 import MobileProjectCaption from '../components/MobileProjectCaption'
+import { translate } from "react-i18next"
 
-const Projects = ({location}) => {
+const Projects = ({location, lng}) => {
   const [ isAnyHovered, setIsAnyHovered ] = useState(false)
   const [ hoveredIndex, setHoveredIndex ] = useState(null)
   const cursorScreenHalf = useCursorScreenHalf();

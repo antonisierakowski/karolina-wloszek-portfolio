@@ -5,6 +5,8 @@ import PageLink from './PageLink'
 import logoBlack from '../images/logo-black.png'
 import logoWhite from '../images/logo-white.png'
 
+import LanguageSwitcher from './LanguageSwitcher'
+
 import { translate } from "react-i18next"
 
 const HeaderContainer = styled.header`
@@ -53,9 +55,9 @@ const Header = ({fontColor, location, t}) => {
             <img alt='logo' src={fontColor === 'white' ? logoWhite : logoBlack} className='logo'/>
         </PageLink>
         <ul>
-          <li>PL / EN</li>
           <HeaderNavLink currentLocation={location} targetLocation='/projects/'>{t('projects')}</HeaderNavLink>
-          <HeaderNavLink currentLocation={location} targetLocation='/about-me/'>ABOUT ME</HeaderNavLink>
+          <HeaderNavLink currentLocation={location} targetLocation='/about-me/'>{t('about me')}</HeaderNavLink>
+          <LanguageSwitcher color={fontColor}/>
         </ul>
       </div>
     </HeaderContainer>

@@ -5,7 +5,9 @@
     min-height: 100vh;
 
     &.background {
-        background: linear-gradient(rgb(249,195,177), white);
+        // background: linear-gradient(rgb(249,195,177), white);
+        background-position: center center;
+        background-size: cover;
     }
 
     .center {
@@ -13,15 +15,14 @@
         .introduction-wrapper {
             width: 100%;
             display: flex;
-            flex-direction: row-reverse;
+            justify-content: center;
             align-items: center;
             height: 100vh;
             div, .react-reveal {
                 width: 50%;
                 @include mobile {
-                    width: 100%;
-                    text-align: right;
-                    font-size: 2.2rem;
+                    width: 70%;
+                    font-size: 2.6rem;
                 }
                 color: white;
                 font-size: 2.5rem;

@@ -10,13 +10,14 @@ import PageLink from '../components/PageLink'
 import { navigate } from 'gatsby'
 import Slide from 'react-reveal/Slide';
 
+import { translate } from "react-i18next"
 
-export default function Template({data, nextData, location}) {
+
+const Template = ({data, nextData, location, lng}) => {
     const isOnTop = useOnTopPosition()
     const infoRef = useRef(null)
     const browser = detect().name
     smoothscroll.polyfill()
-    
 
     const [ nextPrjHov, setNextPrjHov ] = useState(false);
     const [ linkTriggered, setLinkTriggered ] = useState(false)
@@ -87,8 +88,6 @@ export default function Template({data, nextData, location}) {
                         <div><span>Scroll</span></div>
                     </div></Slide>
                 </section>
-
-                
                 <section className='center' ref={infoRef}>
                     <section className='project-info'>
                         <div className='title-section'>
@@ -185,3 +184,5 @@ export default function Template({data, nextData, location}) {
         </Layout>
     )
 }
+
+export default translate()(Template)
