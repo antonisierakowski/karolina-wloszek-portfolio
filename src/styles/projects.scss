@@ -31,9 +31,10 @@
                 
                 .slick-track {
                     height: 100%;
+
                     div {
                         height: 100%;
-                        
+                  
                     }
                 }
             }
@@ -49,7 +50,7 @@
                     object-fit: cover;
                     object-position: center center;
                     // max-width: 19.5rem;
-                    max-width: 97%;
+                    // max-width: 97%;
                     height: 100%;
                     margin: auto;
                     transition: filter 0.2s;

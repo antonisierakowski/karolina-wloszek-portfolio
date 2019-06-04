@@ -4,57 +4,57 @@ import styled from 'styled-components'
 import PageLink from './PageLink'
 import logoBlack from '../images/logo-black.png'
 import logoWhite from '../images/logo-white.png'
-import { Fade } from 'react-reveal'
+
+import { translate } from "react-i18next"
 
 const HeaderContainer = styled.header`
   color: ${props => props.color};
   .center {
     ul {
       .hoverable:before, .hoverable:after {
-            content: '';
-            position: absolute;
-            width: 0%;
-            height: 0.12rem;
-            top: 50%;
-            margin-top: -0.5px;
-            background: #fff;
-        }
+        content: '';
+        position: absolute;
+        width: 0%;
+        height: 0.12rem;
+        top: 50%;
+        margin-top: -0.5px;
+        background: #fff;
+      }
         
-        .hoverable:before {
-            left: 0;
-        }
-        .hoverable:after {
-            right: 0;
-            background: ${props => props.color === 'inherit' ? '#282828' : props.color };
-            transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
-        }
+      .hoverable:before {
+        left: 0;
+      }
+      .hoverable:after {
+        right: 0;
+        background: ${props => props.color === 'inherit' ? '#282828' : props.color };
+        transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+      }
         
-        .hoverable:hover:before {
-            background: ${props => props.color === 'inherit' ? '#282828' : props.color };
-            width: 100%;
-            transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
-        }
+      .hoverable:hover:before {
+        background: ${props => props.color === 'inherit' ? '#282828' : props.color };
+        width: 100%;
+        transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+      }
         
-        .hoverable:hover:after {
-            background: transparent;
-            width: 100%;
-            transition: 0s;
-        }
+      .hoverable:hover:after {
+        background: transparent;
+        width: 100%;
+        transition: 0s;
+      }
     }
   }
 `
 
-const Header = ({fontColor, location}) => {
+const Header = ({fontColor, location, t}) => {
   return (
     <HeaderContainer id='header' color={fontColor}>
       <div className='center'>
         <PageLink to='/'>
-          {/* <Fade bottom cascade> */}
             <img alt='logo' src={fontColor === 'white' ? logoWhite : logoBlack} className='logo'/>
-          {/* </Fade> */}
         </PageLink>
         <ul>
-          <HeaderNavLink currentLocation={location} targetLocation='/projects/'>PROJECTS</HeaderNavLink>
+          <li>PL / EN</li>
+          <HeaderNavLink currentLocation={location} targetLocation='/projects/'>{t('projects')}</HeaderNavLink>
           <HeaderNavLink currentLocation={location} targetLocation='/about-me/'>ABOUT ME</HeaderNavLink>
         </ul>
       </div>
@@ -90,4 +90,5 @@ function HeaderNavLink({ children, currentLocation, targetLocation }) {
   )
 }
 
-export default Header
+// export default Header
+export default translate("Header")(Header)
