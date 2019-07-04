@@ -3,9 +3,10 @@
 #index-page {
     width: 100vw;
     min-height: 100vh;
+  position: relative;
 
     &.background {
-        // background: linear-gradient(rgb(249,195,177), white);
+         //background: linear-gradient(rgb(249,195,177), white) !important;
         background-position: center center;
         background-size: cover;
     }
@@ -66,6 +67,14 @@
             }
         }
     }
+}
+
+#background-canvas {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
 @keyframes colors {
