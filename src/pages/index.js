@@ -9,6 +9,7 @@ import useAnimateWavesBackground from '../components/useAnimateWavesBackground'
 
 import { translate } from "react-i18next"
 
+
 const IndexPage = ({location, t}) => {
   useAnimateWavesBackground()
 
@@ -20,9 +21,7 @@ const IndexPage = ({location, t}) => {
           <div className='center'>
             <div className='introduction-wrapper'>
               <Fade duration={1500}>
-                <IntroText city={t('city')}>
-                  {t('intro-part1')}<span></span>.<br/>{t('intro-part2')}<span>{t('intro-link')}</span>
-                </IntroText>
+                <span className='title'>Hello!</span>
               </Fade>
             </div>
           </div>

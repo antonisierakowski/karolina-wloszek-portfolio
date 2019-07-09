@@ -111,9 +111,11 @@ const Template = ({data, nextData, location, lng, t}) => {
             {seo}
             <div id='project-page' className='background'>
                 <section className='project-cover' style={{backgroundImage: `url(${data.contentData.coverImg})`}} onClick={handleCoverClick} >
-                    <Slide bottom><div className='scroll-indicator'>
-                        <div><span>{t('scroll')}</span></div>
-                    </div></Slide>
+                    <Slide bottom>
+                        <div className='scroll-indicator'>
+                            <div><span>{t('scroll')}</span></div>
+                        </div>
+                    </Slide>
                 </section>
                 <section className='center' ref={infoRef}>
                     <section className='project-info'>

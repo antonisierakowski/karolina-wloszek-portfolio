@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useEffect, useRef, useState } from "react"
 import '../styles/projects.scss'
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -9,11 +9,36 @@ import ProjectCaption from '../components/ProjectCaption'
 import useCursorScreenHalf from '../components/useCursorScreenHalf'
 import MobileProjectCaption from '../components/MobileProjectCaption'
 import { translate } from "react-i18next"
+import useSliderScrollHandler from "../custom-hooks/useSliderScrollHandler"
+import Hamster from "hamsterjs"
+import { throttle } from "../utils"
+
+const programaticSlideTime = 400
+const scrollDeltaThreshold = 3
 
 const Projects = ({location, lng}) => {
   const [ isAnyHovered, setIsAnyHovered ] = useState(false)
   const [ hoveredIndex, setHoveredIndex ] = useState(null)
   const cursorScreenHalf = useCursorScreenHalf();
+
+  // const sliderRef = useRef(null)
+  // useEffect(() => {
+  //   const sliderRef = sliderRef.current
+  //   const hamster = Hamster(document.getElementById('projects-page'))
+  //   hamster.wheel(throttle((event, delta, deltaX, deltaY) => {
+  //     if (Math.abs(deltaX) > scrollDeltaThreshold || Math.abs(deltaY) > scrollDeltaThreshold) {
+  //       if (deltaX < 0 || deltaY < 0) {
+  //         sliderRef.slickPrev()
+  //       } else {
+  //         sliderRef.slickNext()
+  //       }
+  //     }
+  //   }, programaticSlideTime))
+  //
+  //   return () => {
+  //     hamster.unwheel()
+  //   }
+  // }, [])
 
   const handleMouseEnter = (i) => {
     setIsAnyHovered(true)
@@ -24,6 +49,8 @@ const Projects = ({location, lng}) => {
     setIsAnyHovered(false)
     setHoveredIndex(null)
   }
+
+  const sliderRef = useSliderScrollHandler(programaticSlideTime, projectsData.length, hoveredIndex, handleMouseEnter)
 
   const projects = projectsData.map((project, i) => {
     return (
@@ -59,7 +86,7 @@ const Projects = ({location, lng}) => {
     arrows: true,
     slidesToScroll: 2,
     lazyLoad: 'progressive',
-    speed: 400,
+    speed: programaticSlideTime,
     responsive: [
       {
         breakpoint: 599,
@@ -87,7 +114,7 @@ const Projects = ({location, lng}) => {
     <SEO title="Projekty" keywords={[`karolina włoszek`, `product design`, `design`, `portfolio`]}/>
       <div id='projects-page' className='background'>
           <div className='slider-wrapper'>
-            <Slider {...slickSettings}>
+            <Slider ref={sliderRef} {...slickSettings}>
               {projects}
             </Slider>
           </div>

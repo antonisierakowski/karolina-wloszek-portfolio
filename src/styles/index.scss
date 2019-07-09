@@ -1,72 +1,72 @@
 @import 'variables', 'mixins';
 
 #index-page {
-    width: 100vw;
-    min-height: 100vh;
+  width: 100vw;
+  min-height: 100vh;
   position: relative;
 
-    &.background {
-         //background: linear-gradient(rgb(249,195,177), white) !important;
-        background-position: center center;
-        background-size: cover;
-    }
+  &.background {
+    //background: linear-gradient(rgb(249,195,177), white) !important;
+    background-position: center center;
+    background-size: cover;
+  }
 
-    .center {
+  .center {
 
-        .introduction-wrapper {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            div, .react-reveal {
-                width: 50%;
-                @include mobile {
-                    width: 70%;
-                    font-size: 2.6rem;
-                }
-                color: white;
-                font-size: 2.5rem;
-                line-height: 40%;
-                font-weight: 700;
-                .intro-text {
-                    width: 100%;
-                    user-select: none;
-                    cursor: default;
-                    .single-letter {
-                        display: inline-block;
-                        transform-origin: 50% 120%;
-                        
-                        line-height: 100%;
-                        overflow: hidden;
-                    }
-                    .hovered {
-                        animation-name: stretch;
-                        animation-duration: 0.15s;
-                        animation-timing-function: linear;
-                        animation-fill-mode: forwards
-                        
-                    }
-    
-                    .unhovered {
-                        animation-name: stretch-back;
-                        animation-duration: 0.25s;
-                        animation-timing-function: linear;
-                    }
-                    a {
-                        // color: rgb(231,185,176);
-                        animation-name: colors;
-                        animation-duration: 1.5s;
-                        animation-iteration-count: infinite;
-                    }
-
-                    .city-name {
-                        
-                    }
-                }
-            }
+    .introduction-wrapper {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      div, .react-reveal {
+        width: 50%;
+        @include mobile {
+          width: 70%;
+          font-size: 2.6rem;
         }
+        color: white;
+        font-size: 2.5rem;
+        line-height: 40%;
+        font-weight: 700;
+        .intro-text {
+          width: 100%;
+          user-select: none;
+          cursor: default;
+          .single-letter {
+            display: inline-block;
+            transform-origin: 50% 120%;
+
+            line-height: 100%;
+            overflow: hidden;
+          }
+          .hovered {
+            animation-name: stretch;
+            animation-duration: 0.15s;
+            animation-timing-function: linear;
+            animation-fill-mode: forwards
+
+          }
+
+          .unhovered {
+            animation-name: stretch-back;
+            animation-duration: 0.25s;
+            animation-timing-function: linear;
+          }
+          a {
+            // color: rgb(231,185,176);
+            animation-name: colors;
+            animation-duration: 1.5s;
+            animation-iteration-count: infinite;
+          }
+
+          .city-name {
+
+          }
+        }
+      }
     }
+  }
 }
 
 #background-canvas {
@@ -77,51 +77,57 @@
   left: 0;
 }
 
+.title {
+  text-align: center;
+  font-size: 190px !important;
+  width: 100%;
+}
+
 @keyframes colors {
-    from, 
-    0% {
-        color: rgb(231,185,176);
-    }
-    50% {
-        color: darken(rgb(231, 154, 139), 3%);
-    }
-    100% {
-        color: rgb(231,185,176);
-    }
+  from,
+  0% {
+    color: rgb(231,185,176);
+  }
+  50% {
+    color: darken(rgb(231, 154, 139), 3%);
+  }
+  100% {
+    color: rgb(231,185,176);
+  }
 }
 
 
 @keyframes stretch {
-    from,
-    0% {
+  from,
+  0% {
 
-    }
+  }
 
-    40% {
-        transform: scale(1, 1.35);
-    }
+  40% {
+    transform: scale(1, 1.35);
+  }
 
-    100% {
-        transform: scale(1, 1.2);
-    }
+  100% {
+    transform: scale(1, 1.2);
+  }
 }
 
 @keyframes stretch-back {
-    from,
-    0% {
-        transform: scale(1, 1.2);
-    }
+  from,
+  0% {
+    transform: scale(1, 1.2);
+  }
 
-    33% {
-        transform: scale(1, 1);
-    }
+  33% {
+    transform: scale(1, 1);
+  }
 
-    66% {
-        transform: scale(1, 1.08);
-    }
+  66% {
+    transform: scale(1, 1.08);
+  }
 
-    100% {
-        transform: scale(1, 1);
-    }
+  100% {
+    transform: scale(1, 1);
+  }
 }
 
