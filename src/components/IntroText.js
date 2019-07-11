@@ -31,26 +31,26 @@ export default function IntroText({ children, city }) {
         </Fragment>
       ))}
       {/* wrocław z efektem */}
-      <IntroLetter char={scrambledCity} classNm='city-name'/>
+      {/*<IntroLetter char={scrambledCity} classNm='city-name'/>*/}
       {/* kropeczka */}
-      {children[2].split(' ').map((word, i) => (
-        <Fragment key={word + i}>
-          <IntroWord word={word} />
-          <span> </span>
-        </Fragment>
-      ))}
+      {/*{children[2].split(' ').map((word, i) => (*/}
+      {/*  <Fragment key={word + i}>*/}
+      {/*    <IntroWord word={word} />*/}
+      {/*    <span> </span>*/}
+      {/*  </Fragment>*/}
+      {/*))}*/}
       {/* line break */}
       <br/>
       {/* reszta tekstu */}
-      {children[4].split(' ').map((word, i) => (
-        <Fragment key={word + i}>
-          <IntroWord word={word} />
-          <span> </span>
-        </Fragment>
-      ))}
+      {/*{children[4].split(' ').map((word, i) => (*/}
+      {/*  <Fragment key={word + i}>*/}
+      {/*    <IntroWord word={word} />*/}
+      {/*    <span> </span>*/}
+      {/*  </Fragment>*/}
+      {/*))}*/}
       {/* link */}
       <AniLink cover bg='pink' to='/projects/'>
-        <IntroLetter char={children[5].props.children} />
+        <IntroLetter char={children[1].props.children} />
       </AniLink>
     </p>
 

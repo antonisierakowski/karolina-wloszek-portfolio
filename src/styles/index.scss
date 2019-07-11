@@ -2,71 +2,74 @@
 
 #index-page {
   width: 100vw;
-  min-height: 100vh;
+  min-height: 200vh;
+  display: flex;
+  flex-direction: column;
   position: relative;
 
-  &.background {
-    //background: linear-gradient(rgb(249,195,177), white) !important;
-    background-position: center center;
-    background-size: cover;
-  }
 
-  .center {
+}
 
-    .introduction-wrapper {
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+.introduction-wrapper {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  //height: 100vh;
+  color: white;
+  font-size: 2.5rem;
+  line-height: 40%;
+  font-weight: 700;
+    .intro-text {
       width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      div, .react-reveal {
-        width: 50%;
-        @include mobile {
-          width: 70%;
-          font-size: 2.6rem;
-        }
-        color: white;
-        font-size: 2.5rem;
-        line-height: 40%;
-        font-weight: 700;
-        .intro-text {
-          width: 100%;
-          user-select: none;
-          cursor: default;
-          .single-letter {
-            display: inline-block;
-            transform-origin: 50% 120%;
+      user-select: none;
+      cursor: default;
+      .single-letter {
+        display: inline-block;
+        transform-origin: 50% 120%;
 
-            line-height: 100%;
-            overflow: hidden;
-          }
-          .hovered {
-            animation-name: stretch;
-            animation-duration: 0.15s;
-            animation-timing-function: linear;
-            animation-fill-mode: forwards
+        line-height: 100%;
+        overflow: hidden;
+      }
+      .hovered {
+        animation-name: stretch;
+        animation-duration: 0.15s;
+        animation-timing-function: linear;
+        animation-fill-mode: forwards
 
-          }
+      }
 
-          .unhovered {
-            animation-name: stretch-back;
-            animation-duration: 0.25s;
-            animation-timing-function: linear;
-          }
-          a {
-            // color: rgb(231,185,176);
-            animation-name: colors;
-            animation-duration: 1.5s;
-            animation-iteration-count: infinite;
-          }
+      .unhovered {
+        animation-name: stretch-back;
+        animation-duration: 0.25s;
+        animation-timing-function: linear;
+      }
+      a {
+        // color: rgb(231,185,176);
+        animation-name: colors;
+        animation-duration: 1.5s;
+        animation-iteration-count: infinite;
+      }
 
-          .city-name {
+      .city-name {
 
-          }
-        }
       }
     }
-  }
+}
+
+.full-height-page {
+  height: 100vh;
+  width: 100%;
+  background-color: #FFCFBE;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #background-canvas {
@@ -95,6 +98,46 @@
   animation-direction: alternate;
 }
 
+.scroll-indicator {
+  color: white;
+  width: 2px;
+  background-color: white;
+  height: 4rem;
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+}
+
+.scroll-indicator span {
+  font-weight: 800;
+  font-size: 1.5rem;
+  position: absolute;
+  top: -50%;
+  left: -30px;
+  display: inline-block;
+  //animation: scrollIndicatorMove 2s infinite;
+}
+
+@keyframes scrollIndicatorMove {
+  from,
+  0% {
+  }
+
+  25% {
+    transform: translateY(10px);
+  }
+  50% {
+
+    transform: translateX(0);
+  }
+
+  75% {
+    transform: translateY(10px);
+  }
+  100% {
+
+  }
+}
 
 @keyframes colors {
   from,

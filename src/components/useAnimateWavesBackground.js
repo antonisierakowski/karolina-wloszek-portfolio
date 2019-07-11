@@ -18,7 +18,7 @@ export default function () {
       const waveHeights = [height/1.2, height/1.7, height/2.6, 300, 125]
 // const waveHeights = [125, 300, height/2.6, height/1.7, height/1.2]
 
-      var colors = ["#EE7768", "#FF998C", "#FFBDA6", "#FFCFBE", "#FFE2D5"];
+      var colors = ["#EE7768", "#FF998C", "#FFBDA6", "#FFC2AD", "#FFCFBE"];
 
       window.addEventListener('resize', resizeCanvas, false);
 
