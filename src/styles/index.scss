@@ -77,11 +77,24 @@
   left: 0;
 }
 
+@keyframes wave {
+  from { transform : translateY(0); }
+  to   { transform : translateY( 15px ); }
+}
+
 .title {
   text-align: center;
   font-size: 190px !important;
-  width: 100%;
+  width: 100% !important;
 }
+
+.title span {
+  display: inline-block;
+  animation-name: wave;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
 
 @keyframes colors {
   from,

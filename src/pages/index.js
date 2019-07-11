@@ -8,7 +8,9 @@ import background from '../images/main-bg.jpg'
 import useAnimateWavesBackground from '../components/useAnimateWavesBackground'
 
 import { translate } from "react-i18next"
+import { getAnimatedLetterStyle } from "../utils"
 
+const heading = ['H', 'e', 'l', 'l', 'o', '!']
 
 const IndexPage = ({location, t}) => {
   useAnimateWavesBackground()
@@ -21,7 +23,9 @@ const IndexPage = ({location, t}) => {
           <div className='center'>
             <div className='introduction-wrapper'>
               <Fade duration={1500}>
-                <span className='title'>Hello!</span>
+                <span className='title'>{heading.map((letter, index, array) => (
+                  <span style={getAnimatedLetterStyle(index, array.length)}>{letter}</span>
+                ))}</span>
               </Fade>
             </div>
           </div>
