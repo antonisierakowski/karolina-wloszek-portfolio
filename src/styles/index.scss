@@ -7,7 +7,19 @@
   flex-direction: column;
   position: relative;
 
+  .greeting-title {
+    text-align: center;
+    font-size: 10rem;
+    width: 100%;
+    user-select: none;
 
+    @include mobile {
+      font-size: 8rem;
+    }
+    @include tablet {
+      font-size: 9rem;
+    }
+  }
 }
 
 .center {
@@ -26,6 +38,10 @@
   line-height: 40%;
   font-weight: 700;
     .intro-text {
+      text-align: center;
+      @include mobile {
+        text-align: left;
+      }
       width: 100%;
       user-select: none;
       cursor: default;
@@ -49,15 +65,14 @@
         animation-duration: 0.25s;
         animation-timing-function: linear;
       }
+
       a {
-        // color: rgb(231,185,176);
-        animation-name: colors;
-        animation-duration: 1.5s;
-        animation-iteration-count: infinite;
-      }
-
-      .city-name {
-
+        color: rgb(236, 120, 107);
+        // animation-name: colors;
+        // animation-duration: 1.5s;
+        // animation-iteration-count: infinite;
+        display: inline-block;
+        width: 100%;
       }
     }
 }
@@ -85,12 +100,6 @@
   to   { transform : translateY( 15px ); }
 }
 
-.title {
-  text-align: center;
-  font-size: 190px !important;
-  width: 100% !important;
-}
-
 .title span {
   display: inline-block;
   animation-name: wave;
@@ -106,16 +115,16 @@
   position: absolute;
   bottom: 0;
   right: 50%;
-}
 
-.scroll-indicator span {
-  font-weight: 800;
-  font-size: 1.5rem;
-  position: absolute;
-  top: -50%;
-  left: -30px;
-  display: inline-block;
-  //animation: scrollIndicatorMove 2s infinite;
+  div {
+    font-weight: 800;
+    font-size: 1.5rem;
+    position: absolute;
+    top: -40%;
+    display: inline-block;
+    transform: translateX(-45%);
+    //animation: scrollIndicatorMove 2s infinite;
+  }
 }
 
 @keyframes scrollIndicatorMove {

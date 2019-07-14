@@ -1,26 +1,8 @@
 import React, { Fragment, useState } from 'react'
 import AniLink from "gatsby-plugin-transition-link/AniLink"
-import Scramble from 'react-scramble'
 
 export default function IntroText({ children, city }) {
-  const scrambledCity = (
-    <Scramble 
-      autoStart
-      text={city}
-      speed='slow'
-      steps={[
-        {
-          roll: 5,
-          action: '+',
-        },
-        {
-          roll: 20,
-          action: '-',
-          type: 'forward',
-        },
-      ]}
-    />
-  )
+
   return (
     <p className="intro-text">
       {/* początek tekstu */}
@@ -30,27 +12,19 @@ export default function IntroText({ children, city }) {
           <span> </span>
         </Fragment>
       ))}
-      {/* wrocław z efektem */}
-      {/*<IntroLetter char={scrambledCity} classNm='city-name'/>*/}
+      {/* wrocław */}
+      {children[2].split(' ').map((word, i) => (
+        <Fragment key={word + i}>
+          <IntroWord word={word} />
+        </Fragment>
+      ))}
       {/* kropeczka */}
-      {/*{children[2].split(' ').map((word, i) => (*/}
-      {/*  <Fragment key={word + i}>*/}
-      {/*    <IntroWord word={word} />*/}
-      {/*    <span> </span>*/}
-      {/*  </Fragment>*/}
-      {/*))}*/}
+      <IntroWord word={'.'} />
       {/* line break */}
       <br/>
-      {/* reszta tekstu */}
-      {/*{children[4].split(' ').map((word, i) => (*/}
-      {/*  <Fragment key={word + i}>*/}
-      {/*    <IntroWord word={word} />*/}
-      {/*    <span> </span>*/}
-      {/*  </Fragment>*/}
-      {/*))}*/}
       {/* link */}
       <AniLink cover bg='pink' to='/projects/'>
-        <IntroLetter char={children[1].props.children} />
+        <IntroLetter char={children[5]} />
       </AniLink>
     </p>
 

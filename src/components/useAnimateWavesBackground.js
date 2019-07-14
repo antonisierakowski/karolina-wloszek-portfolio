@@ -1,9 +1,10 @@
 import { useEffect } from "react"
+import { window, document } from 'browser-monads'
 
 export default function () {
   useEffect(() => {
     const canvas = document.getElementById('background-canvas')
-    console.log(canvas)
+
     if (canvas) {
       var context = canvas.getContext('2d');
 

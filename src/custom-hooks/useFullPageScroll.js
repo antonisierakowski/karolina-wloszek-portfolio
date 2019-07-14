@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react'
 import Hamster from "hamsterjs"
-import { doNothing, throttle } from "../utils"
+import { window } from 'browser-monads'
+import smoothscroll from 'smoothscroll-polyfill'
+// import { doNothing, throttle } from "../utils"
 
 const scrollToSecondPage = () => {
   const pageHeight = window.innerHeight
@@ -21,23 +23,28 @@ const scrollToFirstPage = () => {
 
 export function useFullPageScroll() {
   const [isOnBottomPage, onSetIsOnBottomPage] = useState(false)
+  smoothscroll.polyfill()
 
   useEffect(() => {
-    const hamster = Hamster(document.getElementById('index-page'))
+    if (typeof document !== `undefined`) {
+      const hamster = Hamster(document.getElementById('index-page'))
 
-    hamster.wheel((event, delta, deltaX, deltaY) => {
-      event.preventDefault()
-      if (isOnBottomPage) {
-        onSetIsOnBottomPage(false)
-        scrollToFirstPage()
-      } else {
-        scrollToSecondPage()
-        onSetIsOnBottomPage(true)
+      hamster.wheel((event, delta, deltaX, deltaY) => {
+        event.preventDefault()
+        if (isOnBottomPage) {
+          onSetIsOnBottomPage(false)
+          scrollToFirstPage()
+        } else {
+          scrollToSecondPage()
+          onSetIsOnBottomPage(true)
+        }
+      })
+  
+      return () => {
+        hamster.unwheel()
       }
-    })
-
-    return () => {
-      hamster.unwheel()
     }
+
+    return () => {}
   }, [isOnBottomPage])
 }

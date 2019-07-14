@@ -11,11 +11,23 @@ import { getAnimatedLetterStyle } from "../utils"
 import Slide from "react-reveal/Slide"
 import { useFullPageScroll } from "../custom-hooks/useFullPageScroll"
 
-const heading = ['H', 'e', 'l', 'l', 'o', '!']
-
-const IndexPage = ({location, t}) => {
+const IndexPage = ({location, t, lng}) => {
   useAnimateWavesBackground()
   useFullPageScroll()
+
+  let heading;
+  switch(lng) {
+    case 'en':
+      heading = ['H', 'e', 'l', 'l', 'o', '!']
+      break;
+    case 'pl':
+      heading = ['C', 'z', 'e', 'ś', 'ć', '!']
+      break;
+    default: 
+      heading = ['H', 'e', 'l', 'l', 'o', '!']
+      break;
+  }
+  
 
   return (
     <Layout fontColor='white' location={location}>
@@ -27,7 +39,7 @@ const IndexPage = ({location, t}) => {
             <div className='center'>
               <div className='introduction-wrapper'>
                 <Fade duration={1500}>
-                <span className='title'>{heading.map((letter, index, array) => (
+                <span className='greeting-title'>{heading.map((letter, index, array) => (
                   <span style={getAnimatedLetterStyle(index, array.length)}>{letter}</span>
                 ))}
                 </span>
@@ -36,7 +48,7 @@ const IndexPage = ({location, t}) => {
             </div>
             <Slide bottom>
               <div className='scroll-indicator'>
-                <div><span>{t('Scroll')}</span></div>
+                <div>{t('scroll')}</div>
               </div>
             </Slide>
           </div>
@@ -45,7 +57,7 @@ const IndexPage = ({location, t}) => {
             <div className='center'>
             <div className='introduction-wrapper'>
               <IntroText>
-                I'm Karolina, a freelance graphic and product designer based in Wrocław. <span>Let's meet!</span>
+                {t('intro-part1')}<span></span>{t('city')}.<br/>{t('intro-part2')}
               </IntroText>
             </div>
           </div>

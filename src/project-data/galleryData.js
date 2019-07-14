@@ -64,6 +64,15 @@ import voicemail2 from '../images/gallery/voicemail/2.gif'
 import costamCover from '../images/gallery/costam/cover.jpg'
 import costam1 from '../images/gallery/costam/1.jpg'
 
+import rethinkCover from '../images/gallery/re-think/cover.jpg'
+import rethink1 from '../images/gallery/re-think/1.jpg'
+import rethink2 from '../images/gallery/re-think/2.jpg'
+import rethink3 from '../images/gallery/re-think/3.gif'
+import rethink4 from '../images/gallery/re-think/4.jpg'
+import rethink5 from '../images/gallery/re-think/5.gif'
+import rethink6 from '../images/gallery/re-think/6.jpg'
+import rethink7 from '../images/gallery/re-think/7.jpg'
+
 const galleryData = {
     mula: [
         mulaCover, mula1, mula2_1, mula2_2, mula3, mula4, mula5_1, mula5_2, mula6
@@ -94,6 +103,9 @@ const galleryData = {
     ],
     costam: [
         costamCover, costam1,
+    ],
+    rethink: [
+        rethinkCover, rethink1, rethink2, rethink3, rethink4, rethink5, rethink6, rethink7,
     ]
 }
 

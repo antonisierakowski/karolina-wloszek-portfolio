@@ -105,7 +105,7 @@ const Template = ({data, nextData, location, lng, t}) => {
             )
         })
     }
-    console.log(data)
+
     return (
         <Layout fontColor='inherit' location={location}>
             {seo}

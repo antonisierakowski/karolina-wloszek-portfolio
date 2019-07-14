@@ -15,7 +15,6 @@
         background-size: cover;
         background-position: center;
         cursor: pointer;
-
         .scroll-indicator {
             width: 0;
             height: 4rem;
@@ -27,12 +26,12 @@
                 font-weight: 800;
                 font-size: 1.5rem;
                 position: absolute;
-                top: -30%;
-                left: 0;
+                top: -45%;
                 transform-origin: center left;
                 transform: rotate(-90deg);
                 
                 span {
+                    color: black;
                     display: inline-block;
                     animation: move 2s infinite;
                 }
@@ -79,6 +78,9 @@
             align-items: center;
         }
         .project-info {
+            display: flex;
+            height: 70%;
+            justify-content: space-around;
             @include mobile {
                 flex-direction: column;
                 align-items: center;
@@ -91,8 +93,6 @@
                 padding-top: 6rem;
                 // padding-bottom: 1rem;
             }
-            display: flex;
-            height: 70%;
             .title-section {
                 @include mobile {
                     width: 100%;

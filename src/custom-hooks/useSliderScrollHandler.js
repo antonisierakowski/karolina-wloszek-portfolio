@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react"
 import Hamster from "hamsterjs"
+import { window, document } from 'browser-monads'
 import { doNothing, throttle } from "../utils"
 
 const getNumberOfSlidesToScroll = () => {
@@ -21,14 +22,14 @@ export default function (scrollThrottle = 400, numberOfSlides, hoveredSlideIndex
         slickSliderRef.slickPrev()
         const slidesToScroll = getNumberOfSlidesToScroll()
         const newHoveredSlideIndex = Math.abs(hoveredSlideIndex - slidesToScroll) % numberOfSlides
-        console.log('newHoveredSlideIndex', newHoveredSlideIndex)
+        // console.log('newHoveredSlideIndex', newHoveredSlideIndex)
         onSlideCallback(newHoveredSlideIndex)
 
       } else {
         slickSliderRef.slickNext()
         const slidesToScroll = getNumberOfSlidesToScroll()
         const newHoveredSlideIndex = (hoveredSlideIndex + slidesToScroll) % numberOfSlides
-        console.log('newHoveredSlideIndex', newHoveredSlideIndex)
+        // console.log('newHoveredSlideIndex', newHoveredSlideIndex)
         onSlideCallback(newHoveredSlideIndex)
       }
     }, scrollThrottle))

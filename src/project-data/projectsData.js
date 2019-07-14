@@ -392,8 +392,105 @@ projectsData[4] = {
     },
 }
 
-// pokoj zabaw
+// re-think
 projectsData[5] = {
+    title: {
+        pl: 're-think',
+        en: 're-think',
+    },
+    route: 'rethink',
+    previewData: {
+        caption: {
+            pl: 'Ilustracja, Projektowanie Graficzne',
+            en: 'Illustration, Graphic Design',
+        },
+        img: projectPreviews.rethink,
+    },
+    contentData: {
+        coverImg: galleryData.rethink[0],
+        year: '2019',
+        subtitle: {
+            pl: 'Zin',
+            en: 'Zine'
+        },
+        paragraphs: {
+            pl: [
+                {
+                    title: 'OPIS',
+                    content: <>
+                        <p>
+                            Ilustrowana historia o tym jaki zalewająca nas fala plastiku może mieć wpływ na relacje międzyludzkie, międzygatunkowe i międzyrybne. O tym jaki każdy z nas ma wpływ na zanieczyszczenie Ziemii.
+                        </p>
+                        <p>
+                            I w końcu o tym jak stopniowo wprowadzając niewielkie zmiany w swoim życiu możemy zmienić świadomość ludzi wokół siebie i choć trochę popchnąć narracjęo przyszłości naszej planety w mniej katastroficznym kierunku.
+                        </p>
+                        <p>
+                            Cała seria została wydrukowana na papierze ekologicznym o gramaturze 120 oraz oprawiona ręcznie w tekstylną okładkę z surowego lnu.
+                        </p>
+                    </>,
+                },
+                {
+                    title: 'MOJA ROLA',
+                    content: <p>Ilustracja, Projektowanie Graficzne</p>
+                },
+                {
+                    title: 'WIĘCEJ INFO',
+                    content: <p>Personal project</p>
+                },
+            ],
+            en: [
+                {
+                    title: 'ABOUT',
+                    content: <>
+                        <p>
+                            An illustrated story about an effect that ever increasing plastic pollution has on both interprsonal and interspecies relationships. About how each of us have an impact on Earth’s pollution.
+                        </p>
+                        <p>
+                            Finally, it tells us how to gradually introduce small changes in our lives and make people around us aware of the enviroment, and by that push the narrative of the future of our planet in a less catastrophic direction.
+                        </p>
+                        <p>
+                            The entire series was printed on ecological 120gsm paper and hand-bound using flax linien.
+                        </p>
+                    </>,
+                },
+                {
+                    title: 'MY ROLE',
+                    content: <p>Illustration, Graphic Design</p>
+                },
+                {
+                    title: 'MORE INFO',
+                    content: <p>Personal project</p>
+                },
+            ]
+        },
+        gallery: [
+            [
+                galleryData.rethink[1],
+            ],
+            [
+                galleryData.rethink[2],
+            ],
+            [
+                galleryData.rethink[3],
+            ],
+            [
+                galleryData.rethink[4],
+            ],
+            [
+                galleryData.rethink[5],
+            ],
+            [
+                galleryData.rethink[6],
+            ],
+            [
+                galleryData.rethink[7],
+            ],
+        ]
+    },
+}
+
+// pokoj zabaw
+projectsData[6] = {
     title: {
         pl: <Fragment>Pokój&nbsp;zabaw</Fragment>,
         en: 'Playroom'
@@ -467,7 +564,7 @@ projectsData[5] = {
 }
 
 // costam
-projectsData[6] = {
+projectsData[7] = {
     title: {
         pl: 'Cośtam',
         en: 'Cośtam',
@@ -526,7 +623,7 @@ projectsData[6] = {
 }
 
 // ilustracje
-projectsData[7] = {
+projectsData[8] = {
     title: {
         pl: '3x3',
         en: '3x3',
@@ -591,7 +688,7 @@ projectsData[7] = {
 }
 
 // ulicznicy
-projectsData[8] = {
+projectsData[9] = {
     title: {
         pl: 'Ulicznicy',
         en: 'Ulicznicy',
@@ -645,7 +742,7 @@ projectsData[8] = {
 }
 
 // voicemail
-projectsData[9] = {
+projectsData[10] = {
     title: {
         pl: 'Voicemail',
         en: 'Voicemail',
